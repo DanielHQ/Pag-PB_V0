@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/MenuList/menuList.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Acrometal</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="Encabezado">
+            <div class="Encabezado-Titulo">
+                <h1>
+                    ACROMETAL
+                </h1>
+            </div>
+            <button class="btn-menu" data-menu-target="menu-menu"><img src="/img/icon/iconBurguer.svg" alt=""></button>
+            <div data-menu-id="menu-menu" data-menu-direction="left" class="menu">
+                <div class="btn-cerrar-derecha">
+                    <button data-menu-close><i class="fas fa-times"></i></button>
+                </div>
+                <nav class="list">
+                    <a href="pages/contactos.html">Contactos</a>
+                    <a href="pages/Tienda.html">Tienda</a>
+                </nav>
+            </div>
+            <nav class="header-menu-List">
+                <ul>
+                    <li><a href="/pages/Tienda.html">Tienda</a></li>
+                    <li><a href="/pages/contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="main-section1">
+            <div class="slider">
+                <ul>
+                    <li> <img src="./img/wallpapers/Fondos_1.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_2.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_3.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_4.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_5.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_6.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_7.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_8.jpeg" alt="Fotos de materiales"></li>
+                </ul>
+            </div>
+        </section>
+        <div class="unico-titulo">
+            <samp></samp>
+            <h2>Empresa</h2>
+            <samp></samp>
+        </div>
+        <section class="main-section2">
+            <div>
+                <h3>
+                    ¿Que es Acrometal?
+                </h3>
+                <p>
+                    Acrometal es una <strong>Empresa de seguridad y Calidad</strong>, nos centramos en la fábrica de aberturas artísticas y herrería tradicional.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    ¿Cual es nuentro propositó?
+                </h3>
+                <p>
+                    Superar las expectativas y mejorar la <strong>Seguridad</strong> de nuestros clientes.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    ¿Por que elegirnos?
+                </h3>
+                <p>
+                    Nuestro conocimiento en el rubro y la pasión puesta en nuestro trabajos, garantizan nuestra producción y calidad. Contamos con el aval de 12 años en la producción de Aberturas de Hierro, Herreria Clasica y Tradicional. Detras de la calidad en nuestros
+                    productos; esta la Calidad de nuestra Gente.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p> Copyright© Acrometal 2022-2022.<br> Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/menulist.js"></script>
+    <script>
+        var menu = new Menu({
+            blur: true,
+            overlay: true
+        });
+    </script>
+</body>
+
+</html>
