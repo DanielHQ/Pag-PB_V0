@@ -40,9 +40,10 @@ header {
     margin: 3px;
 }
 
-.Encabezado h1 {
+.Encabezado h1 a {
     font-family: "Roboto Slab";
     font-size: 3rem;
+    color: #000;
 }
 
 .Encabezado p {
