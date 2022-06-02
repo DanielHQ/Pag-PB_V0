@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Style.css">
+    <link rel="icon" href="/img/icon/HeadLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../css/MenuList/menuList.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>Acrometal</title>
+</head>
+
+<body>
+    <header>
+        <div class="Encabezado">
+            <div>
+                <h1>
+                    ACROMETAL
+                </h1>
+                <p><a href="/pages/Tienda.html">>Tienda</a>>Ventanas</p>
+            </div>
+            <button class="btn-menu" data-menu-target="menu-menu"><img src="/img/icon/iconBurguer.svg" alt=""></button>
+            <div data-menu-id="menu-menu" data-menu-direction="left" class="menu">
+                <div class="btn-cerrar-derecha">
+                    <button data-menu-close><i class="fas fa-times"></i></button>
+                </div>
+                <nav class="list">
+                    <a href="../index.html">Inicio</a>
+                    <a href="/pages/contactos.html">Contactos</a>
+                    <a href="/pages/Tienda.html">Tienda</a>
+                </nav>
+            </div>
+            <nav class="header-menu-List">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="/pages/Tienda.html">Tienda</a></li>
+                    <li><a href="/pages/contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="Panel">
+            <div class="productos-V2">
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img.jpg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"> <img src="../img/Ventanas/img1.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"> <img src="../img/Ventanas/img2.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img3.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"> <img src="../img/Ventanas/img4.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img5.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img6.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img7.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img8.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+                <div>
+                    <a href="#"><img src="../img/Ventanas/img9.jpeg" alt="Imagen de una ventana">Consultar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p> Copyright © Acrometal 2022-2022 Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/menulist.js"></script>
+    <script>
+        var menu = new Menu({
+            blur: true,
+            overlay: true
+        });
+    </script>
+</body>
+
+</html>
