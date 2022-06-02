@@ -273,7 +273,7 @@ main {
     align-items: center;
 }
 
-.logos h2 {
+.logos h2 a {
     font-family: "Roboto Slab";
     font-size: 3rem;
     margin-bottom: 10px;
