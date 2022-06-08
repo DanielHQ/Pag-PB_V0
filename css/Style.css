@@ -464,7 +464,7 @@ html.menu_locked .menu_overlay {
         display: none;
     }
     .header-menu-List {
-        width: 100%;
+        width: 250px;
         display: block;
     }
     .header-menu-List ul {
