@@ -21,7 +21,6 @@ p {
 
 header {
     width: 100%;
-    box-shadow: 1px 1px 8px rgba(89, 73, 30, 0.16);
 }
 
 .Encabezado {
@@ -30,33 +29,27 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
 }
 
 .Encabezado div {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    margin: 3px;
 }
 
 .Encabezado h1 a {
     font-family: "Roboto Slab";
     font-size: 3rem;
+    text-decoration: none;
     color: #000;
 }
 
-.Encabezado p {
-    font-size: 1.5rem;
-    color: gray;
-}
-
-.header-productos p,
-a {
+.Encabezado div p,
+p a {
     font-size: 1.5rem;
     color: gray;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .header-menu-List {
@@ -76,7 +69,6 @@ a {
 
 .menu {
     background: transparent;
-    color: #fff;
     padding: 20px;
 }
 
@@ -131,6 +123,7 @@ main {
     display: flex;
     animation: cambio 15s infinite alternate linear;
     width: 800%;
+    padding: 0;
 }
 
 .slider li {
@@ -190,6 +183,26 @@ main {
     border-top: solid orange 1.5px;
 }
 
+.unico-titulo_index {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.unico-titulo_index h2 {
+    font-family: "Roboto Slab";
+    font-size: 3rem;
+}
+
+.unico-titulo_index samp {
+    width: 120px;
+    height: 0.1px;
+    border-top: solid orange 1.5px;
+}
+
 .main-section2 {
     display: grid;
     align-items: center;
@@ -200,7 +213,6 @@ main {
     background-color: #fff;
     text-align: center;
     margin: 5px;
-    box-shadow: 1px 2px 2px 1px rgba(2, 2, 2, 0.425);
     border-radius: 5px;
     border-bottom: 1.5px solid orange;
 }
@@ -275,6 +287,7 @@ main {
 
 .logos h2 a {
     font-family: "Roboto Slab";
+    text-decoration: none;
     font-size: 3rem;
     margin-bottom: 10px;
     color: #000;
@@ -333,22 +346,14 @@ main {
     row-gap: 10px;
 }
 
-.productos-V2 div a {
+.productos-V2 div {
     display: flex;
-    flex-direction: column;
-    width: 175px;
-    height: 260px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
-    background: #000;
-    color: #fff;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2rem;
 }
 
-.productos-V2 div a img {
+.productos-V2 div img {
     width: 100%;
-    height: 235px;
+    height: 100%;
 }
 
 footer {
@@ -453,6 +458,7 @@ html.menu_locked .menu_overlay {
     /*--------------Inicio-----------------*/
     .Encabezado {
         grid-template-columns: 50% auto;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
     }
     .btn-menu {
         display: none;
@@ -475,7 +481,7 @@ html.menu_locked .menu_overlay {
         text-decoration: none;
     }
     .main-section1 {
-        margin: 0px;
+        margin-top: 3px;
     }
     .slider {
         height: 540px;
@@ -488,6 +494,23 @@ html.menu_locked .menu_overlay {
         width: 100%;
         height: 540px;
     }
+    .unico-titulo {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .unico-titulo h2 {
+        font-family: "Roboto Slab";
+        font-size: 3rem;
+    }
+    .unico-titulo samp {
+        width: 120px;
+        height: 0.1px;
+        border-top: solid orange 1.5px;
+    }
     .unico-titulo samp {
         width: 350px;
     }
@@ -497,9 +520,6 @@ html.menu_locked .menu_overlay {
     .main-section2 {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-rows: min-content;
-        justify-content: space-around;
-        align-items: flex-start;
     }
     /*-----------------Contacto------------------*/
     .div-formulario {
@@ -516,6 +536,6 @@ html.menu_locked .menu_overlay {
     }
     /*------------------Productos------------------*/
     .productos-V2 {
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
     }
 }
