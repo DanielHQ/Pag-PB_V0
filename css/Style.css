@@ -1,499 +1,234 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: "DM sans", sans-serif;
-}
-
-p {
-    font-size: 1.5rem;
-}
-
-header {
-    width: 100%;
-}
-
-.Encabezado {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
-}
-
-.Encabezado div {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-}
-
-.Encabezado h1 a {
-    font-family: "Roboto Slab";
-    font-size: 3rem;
-    text-decoration: none;
-    color: #000;
-}
-
-.Encabezado div p,
-p a {
-    font-size: 1.5rem;
-    color: gray;
-    text-decoration: none;
-}
-
-.header-menu-List {
-    display: none;
-}
-
-.btn-menu {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-menu img {
-    width: 25px;
-    height: 25px;
-}
-
-.menu {
-    background: transparent;
-    padding: 20px;
-}
-
-.menu .btn-cerrar-derecha {
-    text-align: center;
-    display: flex;
-    align-items: flex-end;
-}
-
-.menu .btn-cerrar-derecha button {
-    background: none;
-    color: rgba(128, 128, 128, 0.801);
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.list a {
-    transition: all 200ms ease-out;
-    text-decoration: none;
-    color: gray;
-    font-size: 2rem;
-    margin-top: 25px;
-    border-bottom: 1px solid var(--just-white);
-    border-bottom: 1px solid orange;
-}
-
-
-/*------------------Inicio------------------*/
-
-main {
-    width: 100%;
-}
-
-.main-section1 {
-    margin: 5px;
-}
-
-.slider {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slider ul {
-    display: flex;
-    animation: cambio 15s infinite alternate linear;
-    width: 800%;
-    padding: 0;
-}
-
-.slider li {
-    width: 100%;
-    list-style: none;
-}
-
-.slider img {
-    width: 100%;
-    height: 300px;
-}
-
-@keyframes cambio {
-    0% {
-        margin-left: 0;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
-    20% {
-        margin-left: 0;
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        transition: .3s ease all;
     }
-    25% {
-        margin-left: -100%;
+    
+    body.dark {
+        transition: .3s ease all;
+        background-color: #111b21;
     }
-    45% {
-        margin-left: -100%;
+    
+    html {
+        font-size: 62.5%;
+        font-family: "DM sans", sans-serif;
     }
-    50% {
-        margin-left: -200%;
+    
+    p {
+        font-size: 1.5rem;
     }
-    70% {
-        margin-left: -200%;
+    
+    header {
+        width: 100%;
     }
-    75% {
-        margin-left: -300%;
-    }
-    100% {
-        margin-left: -300%;
-    }
-}
-
-.unico-titulo {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.unico-titulo h2 {
-    font-family: "Roboto Slab";
-    font-size: 3rem;
-}
-
-.unico-titulo samp {
-    width: 120px;
-    height: 0.1px;
-    border-top: solid orange 1.5px;
-}
-
-.unico-titulo_index {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.unico-titulo_index h2 {
-    font-family: "Roboto Slab";
-    font-size: 3rem;
-}
-
-.unico-titulo_index samp {
-    width: 120px;
-    height: 0.1px;
-    border-top: solid orange 1.5px;
-}
-
-.main-section2 {
-    display: grid;
-    align-items: center;
-    width: 100%;
-}
-
-.main-section2 div {
-    background-color: #fff;
-    text-align: center;
-    margin: 5px;
-    border-radius: 5px;
-    border-bottom: 1.5px solid orange;
-}
-
-.main-section2 div h3 {
-    font-family: "Roboto Slab";
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.main-section2 div p {
-    font-size: 1.6rem;
-    margin: 5px;
-}
-
-
-/*------------------Contacto------------------*/
-
-.formulario {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-items: center;
-}
-
-.div-formulario {
-    display: grid;
-    row-gap: 40px;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 1px 5px 9px rgba(89, 73, 30, 0.16);
-    padding: 30px;
-}
-
-.div-formulario form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30rem;
-    height: 25rem;
-}
-
-.div-formulario form input {
-    width: 100%;
-    height: 30px;
-    border: 1px solid #fa4c06;
-}
-
-.div-formulario .boton {
-    width: 80px;
-    height: 30px;
-    margin-top: 20px;
-    border-radius: 15px;
-    font-size: 1.6rem;
-    background-color: #fa4c06;
-    color: aliceblue;
-}
-
-.div-formulario form textarea {
-    width: 100%;
-    height: 60px;
-    border: 1px solid #fa4c06;
-}
-
-.logos {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logos h2 a {
-    font-family: "Roboto Slab";
-    text-decoration: none;
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-.logos nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-
-/*------------------Tienda------------------*/
-
-.productos {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: space-evenly;
-    padding: 20px;
-    gap: 10px;
-    row-gap: 10px;
-}
-
-.productos div a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 275px;
-    height: 430px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
-    background-color: #000;
-    color: #fff;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-.productos div a img {
-    width: 100%;
-    height: 390px;
-}
-
-
-/*------------------Productos------------------*/
-
-.Panel {
-    margin: 10px;
-}
-
-.productos-V2 {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-evenly;
-    gap: 10px;
-    row-gap: 10px;
-}
-
-.productos-V2 div {
-    display: flex;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
-}
-
-.productos-V2 div img {
-    width: 100%;
-    height: 100%;
-}
-
-footer {
-    border-top: solid 1.2px rgb(181, 181, 181);
-    margin-top: auto;
-    background-color: #fff;
-}
-
-footer div {
-    margin: 5px;
-}
-
-
-/*------------------Menulist------------------*/
-
-html.menu_locked {
-    overflow: hidden;
-    -ms-touch-action: none;
-    touch-action: none;
-}
-
-.menu_locked .menu_main_content.menu_blur {
-    filter: blur(15px);
-}
-
-.menu_overlay {
-    z-index: -999;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    will-change: opacity;
-    transition: opacity 0.5s ease;
-    opacity: 0;
-    background: #3c3442;
-}
-
-html.menu_locked .menu_overlay {
-    opacity: 0.8;
-    z-index: 999;
-}
-
-[data-menu-id] {
-    z-index: 1000;
-    position: fixed;
-    overflow-y: auto;
-    will-change: transform;
-    transition: transform 0.5s ease;
-    background: #fff;
-}
-
-[data-menu-direction="left"][data-menu-id] {
-    top: 0;
-    width: 256px;
-    max-width: 100%;
-    height: 100%;
-}
-
-[data-menu-direction="left"][data-menu-id] {
-    left: 0;
-    transform: translateZ(0) translateX(-100%);
-}
-
-[data-menu-id].opened {
-    display: block;
-    transform: translateX(0px) translateY(0px);
-}
-
-@media screen and (max-width:360px) {
-    .header div p {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    /*------------------Inicio------------------*/
-    .slider ul {
-        width: 400%;
-    }
-    .slider img {
-        height: 350px;
-    }
-    .slider {
-        height: 350px;
-    }
-    .unico-titulo samp {
-        width: 250px;
-    }
-    /*------------------Contacto------------------*/
-    /*------------------Tienda------------------*/
-    /*------------------Productos------------------*/
-}
-
-@media screen and (max-width:400px) {
-    .productos-V2 {
-        grid-template-columns: auto;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    /*--------------Inicio-----------------*/
+    
     .Encabezado {
-        grid-template-columns: 50% auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-items: flex-end;
+        width: 100%;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
     }
-    .btn-menu {
-        display: none;
-    }
-    .header-menu-List {
-        width: 250px;
-        display: block;
-    }
-    .header-menu-List ul {
+    
+    .Encabezado-Titulo {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        list-style: none;
-        margin: 7px;
+        flex-direction: column;
+        align-items: baseline;
     }
-    .header-menu-List ul li a {
-        margin-right: 6px;
-        font-size: 1.7rem;
-        color: black;
+    
+    .Encabezado h1 a {
+        font-family: "Roboto Slab";
+        font-size: 3rem;
+        text-decoration: none;
+        color: #000;
+        transition: .3s ease all;
+    }
+    
+    body.dark .Encabezado h1 a {
+        color: whitesmoke;
+        transition: .3s ease all;
+    }
+    
+    .Encabezado div p,
+    p a {
+        font-size: 1.5rem;
+        color: gray;
         text-decoration: none;
     }
+    
+    .header-menu-List {
+        display: none;
+    }
+    
+    .btnPhone {
+        display: flex;
+        flex-direction: row;
+        width: 6rem;
+        justify-content: space-around;
+        align-items: center
+    }
+    
+    .btn-menu {
+        background-image: url(/img/icon/list.svg);
+        transition: .3s ease all;
+        image-resolution: 25px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+    
+    body.dark .btn-menu {
+        background-image: url(/img/icon/list_white.svg);
+        transition: .3s ease all;
+    }
+    
+    .btn-menu_1 {
+        transition: .3s ease all;
+        background-image: url(/img/icon/moon-fill.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .btn-menu_2 {
+        transition: .3s ease all;
+        background-image: url(/img/icon/moon-fill.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+    
+    body.dark .btn-menu_2,
+    body.dark .btn-menu_1 {
+        transition: .3s ease all;
+        background-image: url(/img/icon/sun.svg);
+    }
+    
+    .menu {
+        transition: .3s ease all;
+        background: transparent;
+        padding: 20px;
+    }
+    
+    .menu .btn-cerrar-derecha {
+        text-align: center;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .menu .btn-cerrar-derecha button {
+        background: none;
+        color: rgba(128, 128, 128, 0.801);
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .list a {
+        transition: .3s ease all;
+        transition: all 200ms ease-out;
+        text-decoration: none;
+        color: gray;
+        font-size: 2rem;
+        margin-top: 25px;
+        border-bottom: 1px solid var(--just-white);
+        border-bottom: 1px solid orange;
+    }
+    
+    body.dark .menu {
+        transition: .3s ease all;
+        background-color: #111b21;
+    }
+    
+    body.dark .list a {
+        transition: .3s ease all;
+        color: whitesmoke;
+    }
+    /*------------------Inicio------------------*/
+    
+    main {
+        width: 100%;
+    }
+    
     .main-section1 {
-        margin-top: 3px;
+        margin: 5px;
     }
+    
     .slider {
-        height: 540px;
-        border-radius: 0px;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
     }
+    
     .slider ul {
-        width: 400%;
+        display: flex;
+        animation: cambio 15s infinite alternate linear;
+        width: 800%;
+        padding: 0;
     }
+    
+    .slider li {
+        width: 100%;
+        list-style: none;
+    }
+    
     .slider img {
         width: 100%;
-        height: 540px;
+        height: 300px;
     }
+    
+    @keyframes cambio {
+        0% {
+            margin-left: 0;
+        }
+        20% {
+            margin-left: 0;
+        }
+        25% {
+            margin-left: -100%;
+        }
+        45% {
+            margin-left: -100%;
+        }
+        50% {
+            margin-left: -200%;
+        }
+        70% {
+            margin-left: -200%;
+        }
+        75% {
+            margin-left: -300%;
+        }
+        100% {
+            margin-left: -300%;
+        }
+    }
+    
     .unico-titulo {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -502,40 +237,429 @@ html.menu_locked .menu_overlay {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+    
     .unico-titulo h2 {
+        transition: .3s ease all;
         font-family: "Roboto Slab";
         font-size: 3rem;
     }
+    
+    body.dark .unico-titulo h2 {
+        transition: .3s ease all;
+        color: whitesmoke;
+    }
+    
     .unico-titulo samp {
         width: 120px;
         height: 0.1px;
         border-top: solid orange 1.5px;
     }
-    .unico-titulo samp {
-        width: 350px;
-    }
-    .main-section2 div {
-        max-height: 100%;
-    }
-    .main-section2 {
+    
+    .unico-titulo_index {
         display: grid;
         grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    /*-----------------Contacto------------------*/
+    
+    .unico-titulo_index h2 {
+        transition: .3s ease all;
+        font-family: "Roboto Slab";
+        font-size: 3rem;
+    }
+    
+    body.dark .unico-titulo_index h2 {
+        transition: .3s ease all;
+        color: whitesmoke;
+    }
+    
+    .unico-titulo_index samp {
+        width: 120px;
+        height: 0.1px;
+        border-top: solid orange 1.5px;
+    }
+    
+    .main-section2 {
+        display: grid;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .main-section2 div {
+        transition: .3s ease all;
+        text-align: center;
+        margin: 5px;
+        border-radius: 5px;
+        border-bottom: 1.5px solid orange;
+    }
+    
+    body.dark .main-section2 div {
+        transition: .3s ease all;
+        background-color: #202c33;
+    }
+    
+    .main-section2 div h3 {
+        transition: .3s ease all;
+        font-family: "Roboto Slab";
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    
+    body.dark .main-section2 div h3 {
+        transition: .3s ease all;
+        color: whitesmoke;
+    }
+    
+    body.dark .main-section2 div p {
+        transition: .3s ease all;
+        color: #8696a0;
+    }
+    
+    .main-section2 div p {
+        transition: .3s ease all;
+        font-size: 1.6rem;
+        margin: 5px;
+    }
+    /*------------------Contacto------------------*/
+    
+    .formulario {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+    }
+    
     .div-formulario {
-        grid-template-columns: auto auto;
-        gap: 40px;
+        transition: .3s ease all;
+        display: grid;
+        row-gap: 40px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 5px 9px rgba(89, 73, 30, 0.16);
+        padding: 30px;
     }
+    
+    body.dark .div-formulario {
+        transition: .3s ease all;
+        background-color: #202c33;
+    }
+    
+    .div-formulario form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 30rem;
+        height: 25rem;
+    }
+    
+    .div-formulario form input {
+        width: 100%;
+        height: 30px;
+        border: 1px solid #fa4c06;
+        transition: .3s ease all;
+    }
+    
+    body.dark .div-formulario form input,
+    body.dark .div-formulario form textarea,
+    body.dark .boton a {
+        transition: .3s ease all;
+        background-color: #111b21;
+        color: gray;
+    }
+    
+    .div-formulario .boton {
+        transition: .3s ease all;
+        width: 80px;
+        height: 30px;
+        margin-top: 20px;
+        border-radius: 15px;
+        font-size: 1.6rem;
+        background-color: #fa4c06;
+        color: aliceblue;
+    }
+    
+    .div-formulario form textarea {
+        transition: .3s ease all;
+        width: 100%;
+        height: 60px;
+        border: 1px solid #fa4c06;
+    }
+    
     .logos {
-        height: 15rem;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logos h2 a {
+        font-family: "Roboto Slab";
+        text-decoration: none;
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    
+    body.dark .logos h2 a {
+        transition: .3s ease all;
+        color: gray;
+    }
+    
+    .logos nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
         justify-content: space-around;
     }
     /*------------------Tienda------------------*/
+    
     .productos {
-        grid-template-columns: auto auto auto;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly;
+        padding: 20px;
+        gap: 10px;
+        row-gap: 10px;
+    }
+    
+    .productos div a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 275px;
+        height: 430px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+        background-color: #000;
+        color: #fff;
+        align-items: center;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+    
+    .productos div a img {
+        width: 100%;
+        height: 390px;
     }
     /*------------------Productos------------------*/
-    .productos-V2 {
-        grid-template-columns: auto auto auto auto;
+    
+    .Panel {
+        margin: 10px;
     }
-}
+    
+    .productos-V2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        gap: 10px;
+        row-gap: 10px;
+    }
+    
+    .productos-V2 div {
+        display: flex;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    }
+    
+    .productos-V2 div img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    footer {
+        border-top: solid 1.2px rgb(181, 181, 181);
+        margin-top: auto;
+    }
+    
+    footer div p {
+        transition: .3s ease all;
+    }
+    
+    body.dark footer div p {
+        transition: .3s ease all;
+        color: whitesmoke;
+    }
+    
+    footer div {
+        margin: 5px;
+    }
+    /*------------------Menulist------------------*/
+    
+    html.menu_locked {
+        overflow: hidden;
+        -ms-touch-action: none;
+        touch-action: none;
+    }
+    
+    .menu_locked .menu_main_content.menu_blur {
+        filter: blur(15px);
+    }
+    
+    .menu_overlay {
+        z-index: -999;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        will-change: opacity;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        background: #3c3442;
+    }
+    
+    html.menu_locked .menu_overlay {
+        opacity: 0.8;
+        z-index: 999;
+    }
+    
+    [data-menu-id] {
+        z-index: 1000;
+        position: fixed;
+        overflow-y: auto;
+        will-change: transform;
+        transition: transform 0.5s ease;
+        background: #fff;
+    }
+    
+    [data-menu-direction="left"][data-menu-id] {
+        top: 0;
+        width: 256px;
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    [data-menu-direction="left"][data-menu-id] {
+        left: 0;
+        transform: translateZ(0) translateX(-100%);
+    }
+    
+    [data-menu-id].opened {
+        display: block;
+        transform: translateX(0px) translateY(0px);
+    }
+    
+    @media screen and (max-width:360px) {
+        .header div p {
+            display: none;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        /*------------------Inicio------------------*/
+        .slider ul {
+            width: 400%;
+        }
+        .slider img {
+            height: 350px;
+        }
+        .slider {
+            height: 350px;
+        }
+        .unico-titulo samp {
+            width: 250px;
+        }
+        /*------------------Contacto------------------*/
+        /*------------------Tienda------------------*/
+        /*------------------Productos------------------*/
+    }
+    
+    @media screen and (max-width:400px) {
+        .productos-V2 {
+            grid-template-columns: auto;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        /*--------------Inicio-----------------*/
+        .Encabezado {
+            grid-template-columns: auto auto;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+        }
+        .btnPhone {
+            display: none;
+        }
+        .header-menu-List {
+            width: 250px;
+            display: block;
+        }
+        .header-menu-List ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style: none;
+            margin: 7px;
+        }
+        .header-menu-List ul li a {
+            transition: .3s ease all;
+            margin-right: 6px;
+            font-size: 1.7rem;
+            color: black;
+            text-decoration: none;
+        }
+        body.dark .header-menu-List ul li a {
+            transition: .3s ease all;
+            color: whitesmoke;
+        }
+        .main-section1 {
+            margin-top: 3px;
+        }
+        .slider {
+            height: 540px;
+            border-radius: 0px;
+        }
+        .slider ul {
+            width: 400%;
+        }
+        .slider img {
+            width: 100%;
+            height: 540px;
+        }
+        .unico-titulo {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .unico-titulo h2 {
+            font-family: "Roboto Slab";
+            font-size: 3rem;
+        }
+        .unico-titulo samp {
+            width: 120px;
+            height: 0.1px;
+            border-top: solid orange 1.5px;
+        }
+        .unico-titulo samp {
+            width: 350px;
+        }
+        .main-section2 div {
+            max-height: 100%;
+        }
+        .main-section2 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        /*-----------------Contacto------------------*/
+        .div-formulario {
+            grid-template-columns: auto auto;
+            gap: 40px;
+        }
+        .logos {
+            height: 15rem;
+            justify-content: space-around;
+        }
+        /*------------------Tienda------------------*/
+        .productos {
+            grid-template-columns: auto auto auto;
+        }
+        /*------------------Productos------------------*/
+        .productos-V2 {
+            grid-template-columns: auto auto auto auto;
+        }
+    }

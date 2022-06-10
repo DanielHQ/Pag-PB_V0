@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
     <link rel="stylesheet" href="css/MenuList/menuList.css">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
@@ -28,7 +29,11 @@
                     <a href="../index.html">Acrometal</a>
                 </h1>
             </div>
-            <button class="btn-menu" data-menu-target="menu-menu"><img src="/img/icon/iconBurguer.svg" alt=""></button>
+            <div class="btnPhone">
+                <button class="btn-menu" data-menu-target="menu-menu"></button>
+                <button class="btn-menu_1" id="Modo">
+                </button>
+            </div>
             <div data-menu-id="menu-menu" data-menu-direction="left" class="menu">
                 <div class="btn-cerrar-derecha">
                     <button data-menu-close><i class="fas fa-times"></i></button>
@@ -42,15 +47,17 @@
                 <ul>
                     <li><a href="/pages/Galeria.html">Galeria</a></li>
                     <li><a href="/pages/contactos.html">Contactos</a></li>
+                    <button class="btn-menu_2" id="Modo2"></button>
                 </ul>
             </nav>
+
         </div>
     </header>
     <main>
         <section class="main-section1">
             <div class="slider">
                 <ul>
-                    <li> <img src="./img/wallpapers/Fondos_2.jpeg" alt="Fotos de materiales"></li>
+                    <li><img src="./img/wallpapers/Fondos_2.jpeg" alt="Fotos de materiales"></li>
                     <li><img src="./img/wallpapers/Fondos_1.jpeg" alt="Fotos de materiales"></li>
                     <li><img src="./img/wallpapers/Fondos_3.jpeg" alt="Fotos de materiales"></li>
                     <li><img src="./img/wallpapers/Fondos_4.jpeg" alt="Fotos de materiales"></li>
@@ -67,7 +74,7 @@
             <samp></samp>
         </div>
         <section class="main-section2">
-            <div class="shadow p-3 mb-5 bg-body rounded">
+            <div class="shadow p-3 mb-5  rounded">
                 <h3>
                     ¿Qué es Acrometal?
                 </h3>
@@ -75,7 +82,7 @@
                     Acrometal es una empresa centrada en la fábrica de aberturas artística y herrería tradicional, como así también estructuras y carpintería metálica.
                 </p>
             </div>
-            <div class="shadow p-3 mb-5 bg-body rounded">
+            <div class="shadow p-3 mb-5  rounded">
                 <h3>
                     ¿Cual es nuestro propósito?
                 </h3>
@@ -83,7 +90,7 @@
                     El propósito de acrometal es brindar seguridad y calidad en la producción de nuestros trabajos, como así también acompañar y ser parte activa de sus proyectos.
                 </p>
             </div>
-            <div class="shadow p-3 mb-5 bg-body rounded">
+            <div class="shadow p-3 mb-5  rounded">
                 <h3>
                     ¿Por qué elegirnos?
                 </h3>
@@ -93,9 +100,8 @@
             </div>
         </section>
 
-        <div>
-            <button class=""></button>
-        </div>
+
+
     </main>
     <footer>
         <div>

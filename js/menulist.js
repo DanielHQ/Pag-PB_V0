@@ -79,4 +79,17 @@ class Menu {
 }
 
 
+
 /*Modo Nocturno  o Luminoso*/
+
+const btnModo = document.querySelector("#Modo");
+
+btnModo.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});
+
+const btnModo2 = document.querySelector("#Modo2");
+
+btnModo2.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});
