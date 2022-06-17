@@ -20,58 +20,70 @@
 
 <body>
     <header>
-        <div class="Encabezado row shadow">
-            <div class="col">
-                <h1 class="ms-3 mb-0">
-                    <a href="../index.html">Acrometal</a>
-                </h1>
-                <p class="ms-3 mb-0">>Galeria</p>
-            </div>
-            <div class="btnPhone col">
-                <button class="btn-menu" data-menu-target="menu-menu"></button>
-                <button class="btn-menu_1" id="Modo">
-                </button>
-            </div>
-            <div data-menu-id="menu-menu" data-menu-direction="left" class="menu">
-                <div class="btn-cerrar-derecha">
-                    <button data-menu-close><i class="fas fa-times"></i></button>
+        <section class="Encabezado container">
+            <div class="row">
+                <div class="Encabezado-Titulo col-9">
+                    <h1>
+                        <a href="../index.html">Acrometal</a>
+                    </h1>
+                    <p class="">>Galeria</p>
                 </div>
-                <nav class="list p-3">
-                    <a href="/pages/contactos.html">Contactos</a>
-                    <a href="../index.html">Inicio</a>
-                </nav>
-            </div>
-            <nav class="header-menu-List p-3 col">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="/pages/contactos.html">Contactos</a></li>
-                    <button class="btn-menu_2" id="Modo2"></button>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="unico-titulo row mb-3 mt-3">
-            <samp class="col"></samp>
-            <h2 class="col text-center">Galeria</h2>
-            <samp class="col"></samp>
-        </div>
-        <section>
-            <div class="productos d-grid justify-content-evenly">
-                <div class="shadow">
-                    <a href="Puertas.html"> <img src="../img/Puertas/img.jpg " alt="Imagen de una puerta ">Puertas</a>
+                <div class="btnPhone col-3">
+                    <nav>
+                        <button class="btn-menu" data-menu-target="menu-menu"></button>
+                        <button class="btn-menu_1" id="Modo"></button>
+                    </nav>
                 </div>
-                <div class="shadow">
-                    <a href="Portnes.html"> <img src="../img/Portones/img.jpg" alt="Imagen de una puerta ">Portones</a>
+                <div data-menu-id="menu-menu" data-menu-direction="left" class="menu">
+                    <div class="btn-cerrar-derecha">
+                        <button data-menu-close><i class="fas fa-times"></i></button>
+                    </div>
+                    <nav class="list">
+                        <a href="/pages/contactos.html">Contactos</a>
+                        <a href="../index.html">Inicio</a>
+                    </nav>
                 </div>
-                <div class="shadow">
-                    <a href="ventanas.html"> <img src="../img/Ventanas/img.jpg" alt="Imagen de una puerta ">Ventanas</a>
+                <div class="header-menu-List col-3">
+                    <nav class="w-100">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="/pages/contactos.html">Contactos</a></li>
+                            <button class="btn-menu_2" id="Modo2"></button>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
+    </header>
+    <main>
+        <section class="container-fluid">
+            <article class="container">
+                <div class="unico-titulo row mt-4 mb-4">
+                    <samp class="col"></samp>
+                    <h2 class="col text-center">Galeria</h2>
+                    <samp class="col"></samp>
+                </div>
+            </article>
+            <article class="container">
+                <div class="productos row w-100 justify-content-evenly">
+                    <div class="col-sm-12 col-md col-lg">
+                        <img src="../img/Puertas/img.jpg " alt="Imagen de una puerta ">
+                        <a href="Puertas.html"> Puertas</a>
+                    </div>
+                    <div class="col-sm-12 col-md col-lg">
+                        <img src="../img/Portones/img.jpg" alt="Imagen de una puerta ">
+                        <a href="Portnes.html">Portones</a>
+                    </div>
+                    <div class="col-sm-12 col-md col-lg">
+                        <img src="../img/Ventanas/img.jpg" alt="Imagen de una puerta ">
+                        <a href="ventanas.html"> Ventanas</a>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
-        <div class="row">
+        <div class="container">
             <p> Copyright © Acrometal 2022-2022 Todos los derechos reservados</p>
         </div>
     </footer>

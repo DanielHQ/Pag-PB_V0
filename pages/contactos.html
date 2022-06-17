@@ -20,64 +20,72 @@
 
 <body>
     <header>
-        <div class="Encabezado row shadow">
-            <div class="col">
-                <h1 class="ms-3 mb-0">
-                    <a href="../index.html">Acrometal</a>
-                </h1>
-                <p class="ms-3 mb-0">>Contactos</p>
-            </div>
-            <div class="btnPhone col">
-                <button class="btn-menu" data-menu-target="menu-menu"></button>
-                <button class="btn-menu_1" id="Modo">
-                </button>
-            </div>
-            <div data-menu-id="menu-menu" data-menu-direction="left" class="menu">
-                <div class="btn-cerrar-derecha">
-                    <button data-menu-close><i class="fas fa-times"></i></button>
+        <section class="Encabezado container">
+            <div class="row">
+                <div class="Encabezado-Titulo col-9">
+                    <h1>
+                        <a href="../index.html">Acrometal</a>
+                    </h1>
                 </div>
-                <nav class="list p-3">
-                    <a href="../index.html">Inicio</a>
-                    <a href="/pages/Galeria.html">Galeria</a>
-                </nav>
-            </div>
-            <nav class="header-menu-List col">
-                <ul>
-                    <li><a href="/pages/Galeria.html">Galeria</a></li>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <button class="btn-menu_2" id="Modo2"></button>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="unico-titulo row mb-3 mt-3">
-            <samp class="col"></samp>
-            <h2 class="col text-center">Contacto</h2>
-            <samp class="col"></samp>
-        </div>
-        <section class="formulario m-3 m-lg-5">
-            <div class="div-formulario row shadow  p-5">
-                <form class="col-md">
-                    <input class="form-control" type="text" name="textos" required value="" placeholder="Escribe tu nombre" id="name" autocomplete="name"></br>
-                    <input class="form-control" type="email" name="Correos" required value="" placeholder="Correo" id="Escribe tu email" autocomplete="email"></br>
-                    <textarea class="form-control" type="text" readonly placeholder="Escribe el mensaje"></textarea></br>
-                    <input class="boton" type="submit" placeholder="Enviar" required value="Enviar">
-                </form>
-                <div class="logos col-md">
-                    <h2>
-                        <a href="../index.html">ACROMETAL</a>
-                    </h2>
+                <div class="btnPhone col-3">
                     <nav>
-                        <a href="https://www.facebook.com/fabricadeaberturascorrientes"><img src="../img/icon/facebook.png" alt="Logo de facebook" width="40px"></a>
-                        <a href="https://api.whatsapp.com/send?phone=5493795160003&"><img src="../img/icon/whatsapp.png" alt="Logo de whatsapp" width="40px"></a>
+                        <button class="btn-menu" data-menu-target="menu-menu"></button>
+                        <button class="btn-menu_1" id="Modo"></button>
+                    </nav>
+                </div>
+                <div data-menu-id="menu-menu" data-menu-direction="left" class="menu p-2">
+                    <div class="btn-cerrar-derecha">
+                        <button data-menu-close><i class="fas fa-times"></i></button>
+                    </div>
+                    <nav class="list">
+                        <a href="../index.html">Inicio</a>
+                        <a href="pages/Galeria.html">Galeria</a>
+                    </nav>
+                </div>
+                <div class="header-menu-List col-3">
+                    <nav class="w-100">
+                        <ul>
+                            <li><a href="/pages/Galeria.html">Galeria</a></li>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <button class="btn-menu_2" id="Modo2"></button>
+                        </ul>
                     </nav>
                 </div>
             </div>
         </section>
+    </header>
+    <main>
+        <section class="container">
+            <article class="container">
+                <div class="unico-titulo row mt-4 mb-4">
+                    <samp class="col"></samp>
+                    <h2 class="col text-center">Contactos</h2>
+                    <samp class="col"></samp>
+                </div>
+            </article>
+            <section class="formulario container">
+                <div class="div-formulario row shadow p-3 p-lg-4 m-lg-5 m-3">
+                    <form class="col-md-5 h-75">
+                        <input class="form-control" type="text" name="textos" required value="" placeholder="Escribe tu nombre" id="name" autocomplete="name"></br>
+                        <input class="form-control" type="email" name="Correos" required value="" placeholder="Correo" id="Escribe tu email" autocomplete="email"></br>
+                        <textarea class="form-control" type="text" readonly placeholder="Escribe el mensaje"></textarea></br>
+                        <input class="boton btn btn-primary w-25" type="submit" placeholder="Enviar" required value="Enviar">
+                    </form>
+                    <div class="logos h-100 col-md-5">
+                        <h2>
+                            <a href="../index.html">ACROMETAL</a>
+                        </h2>
+                        <nav>
+                            <a href="https://www.facebook.com/fabricadeaberturascorrientes"><img src="../img/icon/facebook.png" alt="Logo de facebook" width="40px"></a>
+                            <a href="https://api.whatsapp.com/send?phone=5493795160003&"><img src="../img/icon/whatsapp.png" alt="Logo de whatsapp" width="40px"></a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
     <footer>
-        <div class="row">
+        <div class="container">
             <p> Copyright © Acrometal 2022-2022 Todos los derechos reservados</p>
         </div>
     </footer>

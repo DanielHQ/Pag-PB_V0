@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Style.css">
     <link rel="icon" href="/img/icon/HeadLogo.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,92 +16,101 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/Style.css">
     <title>Acrometal</title>
-
 </head>
 
 <body>
     <header>
-        <div class="Encabezado row shadow">
-            <div class="Encabezado-Titulo col">
-                <h1 class="ms-4">
-                    <a href="../index.html">Acrometal</a>
-                </h1>
-            </div>
-            <div class="btnPhone col">
-                <button class="btn-menu" data-menu-target="menu-menu"></button>
-                <button class="btn-menu_1" id="Modo">
-                </button>
-            </div>
-            <div data-menu-id="menu-menu" data-menu-direction="left" class="menu p-2">
-                <div class="btn-cerrar-derecha">
-                    <button data-menu-close><i class="fas fa-times"></i></button>
+        <section class="Encabezado container">
+            <div class="row">
+                <div class="Encabezado-Titulo col-9">
+                    <h1>
+                        <a href="../index.html">Acrometal</a>
+                    </h1>
                 </div>
-                <nav class="list">
-                    <a href="pages/contactos.html">Contactos</a>
-                    <a href="pages/Galeria.html">Galeria</a>
-                </nav>
+                <div class="btnPhone col-3">
+                    <nav>
+                        <button class="btn-menu" data-menu-target="menu-menu"></button>
+                        <button class="btn-menu_1" id="Modo"></button>
+                    </nav>
+                </div>
+                <div data-menu-id="menu-menu" data-menu-direction="left" class="menu p-2">
+                    <div class="btn-cerrar-derecha">
+                        <button data-menu-close><i class="fas fa-times"></i></button>
+                    </div>
+                    <nav class="list">
+                        <a href="pages/contactos.html">Contactos</a>
+                        <a href="pages/Galeria.html">Galeria</a>
+                    </nav>
+                </div>
+                <div class="header-menu-List col-3">
+                    <nav class="w-100">
+                        <ul>
+                            <li><a href="/pages/Galeria.html">Galeria</a></li>
+                            <li><a href="/pages/contactos.html">Contactos</a></li>
+                            <button class="btn-menu_2" id="Modo2"></button>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <nav class="header-menu-List col">
-                <ul>
-                    <li><a href="/pages/Galeria.html">Galeria</a></li>
-                    <li><a href="/pages/contactos.html">Contactos</a></li>
-                    <button class="btn-menu_2" id="Modo2"></button>
-                </ul>
-            </nav>
-        </div>
+        </section>
     </header>
     <main>
-        <section class="main-section1">
-            <div class="slider">
-                <ul>
-                    <li><img src="./img/wallpapers/Fondos_2.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_1.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_3.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_4.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_5.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_6.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_7.jpeg" alt="Fotos de materiales"></li>
-                    <li><img src="./img/wallpapers/Fondos_8.jpeg" alt="Fotos de materiales"></li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div class="unico-titulo_index row">
-                <samp class="col"></samp>
-                <h2 class="col text-center">Empresa</h2>
-                <samp class="col"></samp>
-            </div>
-        </section>
-        <section class="main-section2 m-3 row">
-            <div class="shadow p-3 m-lg-3 mb-5 rounded col-lg">
-                <h3 class="text-center">
-                    ¿Qué es Acrometal?
-                </h3>
-                <p class="text-center">
-                    Acrometal es una empresa centrada en la fábrica de aberturas artística y herrería tradicional, como así también estructuras y carpintería metálica.
-                </p>
-            </div>
-            <div class="shadow p-3 m-lg-3 mb-5 rounded col-lg">
-                <h3 class="text-center">
-                    ¿Cual es nuestro propósito?
-                </h3>
-                <p class="text-center">
-                    El propósito de acrometal es brindar seguridad y calidad en la producción de nuestros trabajos, como así también acompañar y ser parte activa de sus proyectos.
-                </p>
-            </div>
-            <div class="shadow p-3 m-lg-3 mb-5 rounded col-lg">
-                <h3 class="text-center">
-                    ¿Por qué elegirnos?
-                </h3>
-                <p class="text-center">
-                    Garantizamos nuestra producción y calidad. Contamos con el aval de 12 años en la producción de Aberturas de Hierro, Herrería Clásica y Tradicional.
-                </p>
-            </div>
+        <section class="container-fluid">
+            <article class="main-section1 col mt-3 mb-3">
+                <div class="section-slider shadow">
+                    <ul>
+                        <li><img src="./img/wallpapers/Fondos_2.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_1.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_3.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_4.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_5.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_6.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_7.jpeg" alt="Fotos de materiales"></li>
+                        <li><img src="./img/wallpapers/Fondos_8.jpeg" alt="Fotos de materiales"></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="container">
+                <div class="unico-titulo row mt-4 mb-4">
+                    <samp class="col"></samp>
+                    <h2 class="col text-center">Empresa</h2>
+                    <samp class="col"></samp>
+                </div>
+            </article>
+            <article class="container-fluid">
+                <div class="main-section2 m-3 row">
+                    <div class="shadow p-3 mt-md-3 rounded-3 col-lg">
+                        <h3 class="text-center">
+                            ¿Qué es Acrometal?
+                        </h3>
+                        <p class="text-center">
+                            Acrometal es una empresa centrada en la fábrica de aberturas artística y herrería tradicional, como así también estructuras y carpintería metálica.
+                        </p>
+                    </div>
+                    <div class="shadow p-3 mt-md-3 m-lg-3 rounded-3 col-lg">
+                        <h3 class="text-center">
+                            ¿Cual es nuestro propósito?
+                        </h3>
+                        <p class="text-center">
+                            El propósito de acrometal es brindar seguridad y calidad en la producción de nuestros trabajos, como así también acompañar y ser parte activa de sus proyectos.
+                        </p>
+                    </div>
+                    <div class="shadow p-3 mt-md-3 rounded-3 col-lg">
+                        <h3 class="text-center">
+                            ¿Por qué elegirnos?
+                        </h3>
+                        <p class="text-center">
+                            Garantizamos nuestra producción y calidad. Contamos con el aval de 12 años en la producción de Aberturas de Hierro, Herrería Clásica y Tradicional.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
-        <div class="row">
+        <div class="container">
             <p> Copyright© Acrometal 2022-2022.<br> Todos los derechos reservados</p>
         </div>
     </footer>

@@ -9,6 +9,47 @@ body {
     flex-direction: column;
     min-height: 100vh;
     transition: .3s ease all;
+    animation: efectoRebote 2s ease 0s 1 normal forwards;
+}
+
+@keyframes efectoRebote {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateX(-48px);
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateX(-26px);
+    }
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateX(-13px);
+    }
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateX(-6.5px);
+    }
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateX(-4px);
+    }
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+    }
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 body.dark {
@@ -21,18 +62,12 @@ html {
     font-family: "DM sans", sans-serif;
 }
 
+header {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+}
+
 p {
     font-size: 1.5rem;
-}
-
-.row {
-    --bs-gutter-x: 0rem!important
-}
-
-.Encabezado-Titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
 }
 
 .Encabezado h1 a {
@@ -61,16 +96,18 @@ p a {
 
 .btnPhone {
     display: flex;
-    flex-direction: row;
-    width: 6rem;
-    justify-content: space-around;
-    align-items: center
+    align-items: center;
+}
+
+.btnPhone nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly
 }
 
 .btn-menu {
     background-image: url(/img/icon/list.svg);
     transition: .3s ease all;
-    image-resolution: 25px;
     background-repeat: no-repeat;
     background-position: bottom;
     background-color: transparent;
@@ -165,30 +202,25 @@ body.dark .list a {
 
 /*------------------Inicio------------------*/
 
-.main-section1 {
-    margin: 5px;
-}
-
-.slider {
-    width: 100%;
+.section-slider {
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
 }
 
-.slider ul {
+.section-slider ul {
     display: flex;
     animation: cambio 15s infinite alternate linear;
     width: 800%;
     padding: 0;
 }
 
-.slider li {
+.section-slider li {
     width: 100%;
     list-style: none;
 }
 
-.slider img {
+.section-slider img {
     width: 100%;
     height: 300px;
 }
@@ -236,28 +268,6 @@ body.dark .unico-titulo h2 {
 }
 
 .unico-titulo samp {
-    width: 100%;
-    height: 0.1px;
-    border-top: solid orange 1.5px;
-}
-
-.unico-titulo_index {
-    align-items: center;
-}
-
-.unico-titulo_index h2 {
-    transition: .3s ease all;
-    font-family: "Roboto Slab";
-    font-size: 3rem;
-}
-
-body.dark .unico-titulo_index h2 {
-    transition: .3s ease all;
-    color: whitesmoke;
-}
-
-.unico-titulo_index samp {
-    width: 100%;
     height: 0.1px;
     border-top: solid orange 1.5px;
 }
@@ -296,16 +306,11 @@ body.dark .main-section2 div p {
 
 /*------------------Contacto------------------*/
 
-.formulario {
-    justify-items: center;
-}
-
 .div-formulario {
     transition: .3s ease all;
-    display: grid;
-    row-gap: 40px;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 
 body.dark .div-formulario {
@@ -337,11 +342,6 @@ body.dark .boton a {
 
 .div-formulario .boton {
     transition: .3s ease all;
-    width: 80px;
-    height: 30px;
-    margin-top: 20px;
-    border-radius: 15px;
-    font-size: 1.6rem;
     background-color: #fa4c06;
     color: aliceblue;
 }
@@ -354,7 +354,6 @@ body.dark .boton a {
 }
 
 .logos {
-    width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -384,44 +383,36 @@ body.dark .logos h2 a {
 /*------------------Galeria------------------*/
 
 .productos {
-    padding: 20px;
     gap: 10px;
     row-gap: 10px;
 }
 
+.productos div {
+    width: 300px;
+}
+
 .productos div a {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 275px;
-    height: 430px;
+    width: 100%;
+    height: 40px;
     background-color: #000;
     color: #fff;
-    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-size: 2rem;
 }
 
-.productos div a img {
+.productos div img {
     width: 100%;
-    height: 390px;
+    height: 450px;
 }
 
 
 /*------------------Productos------------------*/
 
-.Panel {
-    margin: 10px;
-}
-
-.productos-V2 {
-    gap: 10px;
-    row-gap: 10px;
-}
-
 .productos-V2 div {
     display: flex;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+    padding: 5px;
 }
 
 .productos-V2 div img {
@@ -518,13 +509,13 @@ html.menu_locked .menu_overlay {
 
 @media screen and (min-width: 768px) {
     /*------------------Inicio------------------*/
-    .slider ul {
+    .section-slider ul {
         width: 400%;
     }
-    .slider img {
+    .section-slider img {
         height: 350px;
     }
-    .slider {
+    .section-slider {
         height: 350px;
     }
     .unico-titulo samp {
@@ -545,24 +536,25 @@ html.menu_locked .menu_overlay {
     /*--------------Inicio-----------------*/
     .Encabezado {
         justify-content: space-around;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
     }
     .btnPhone {
         display: none;
     }
     .header-menu-List {
-        width: 250px;
-        display: block;
-    }
-    .header-menu-List ul {
         display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header-menu-List nav ul {
+        display: flex;
+        width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
         list-style: none;
-        margin: 7px;
         align-items: center;
+        margin-bottom: 0;
     }
-    .header-menu-List ul li a {
+    .header-menu-List nav ul li a {
         transition: .3s ease all;
         margin-right: 6px;
         font-size: 1.7rem;
@@ -573,53 +565,27 @@ html.menu_locked .menu_overlay {
         transition: .3s ease all;
         color: whitesmoke;
     }
-    .main-section1 {
-        margin-top: 3px;
-    }
-    .slider {
+    .section-slider {
         height: 540px;
         border-radius: 0px;
     }
-    .slider ul {
+    .section-slider ul {
         width: 400%;
     }
-    .slider img {
+    .section-slider img {
         width: 100%;
         height: 540px;
-    }
-    .unico-titulo {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .unico-titulo h2 {
-        font-family: "Roboto Slab";
-        font-size: 3rem;
-    }
-    .unico-titulo samp {
-        width: 120px;
-        height: 0.1px;
-        border-top: solid orange 1.5px;
-    }
-    .unico-titulo samp {
-        width: 350px;
     }
     .main-section2 div {
         max-height: 100%;
     }
-    .main-section2 {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
     /*-----------------Contacto------------------*/
     .div-formulario {
         gap: 40px;
+        height: 35rem;
     }
     .logos {
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     /*------------------Galeria------------------*/
     .productos {
