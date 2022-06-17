@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="css/MenuList/menuList.css">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -58,20 +57,32 @@
     </header>
     <main>
         <section class="container-fluid">
-            <article class="main-section1 col mt-3 mb-3">
-                <div class="section-slider shadow">
-                    <ul>
-                        <li><img src="./img/wallpapers/Fondos_2.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_1.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_3.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_4.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_5.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_6.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_7.jpeg" alt="Fotos de materiales"></li>
-                        <li><img src="./img/wallpapers/Fondos_8.jpeg" alt="Fotos de materiales"></li>
-                    </ul>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-            </article>
+                <div class="carousel-inner container--slider">
+                    <div class="carousel-item active">
+                        <img src="/img/wallpapers/Fondos_2.jpeg" class="slider__img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/wallpapers/Fondos_1.jpeg" class="slider__img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/wallpapers/Fondos_3.jpeg" class="slider__img" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
             <article class="container">
                 <div class="unico-titulo row mt-4 mb-4">
                     <samp class="col"></samp>
