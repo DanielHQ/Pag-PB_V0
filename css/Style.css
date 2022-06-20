@@ -109,12 +109,12 @@ p a {
     background-image: url(/img/icon/list.svg);
     transition: .3s ease all;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
 }
 
 body.dark .btn-menu {
@@ -126,12 +126,12 @@ body.dark .btn-menu {
     transition: .3s ease all;
     background-image: url(/img/icon/moon-fill.svg);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
 }
 
 .btn-menu_2 {
@@ -155,7 +155,6 @@ body.dark .btn-menu_1 {
 .menu {
     transition: .3s ease all;
     background: transparent;
-    padding: 20px;
 }
 
 .menu .btn-cerrar-derecha {
