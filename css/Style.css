@@ -124,11 +124,6 @@ body.dark .Encabezado h1 a {
   color: rgb(225, 225, 225);
   transition: 0.3s ease all;
 }
-.Encabezado div p a {
-  font-size: 1.5rem;
-  color: #8696a0;
-  text-decoration: none;
-}
 
 .header-menu-List {
   display: none;
@@ -251,14 +246,14 @@ body.dark .container--slider {
 }
 
 .carousel-control-next-icon {
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
 .carousel-control-prev-icon {
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
   width: 30px;
   height: 30px;
   border-radius: 50%;
