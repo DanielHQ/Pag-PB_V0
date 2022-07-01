@@ -1,0 +1,53 @@
+@import 'colores';
+@media screen and (min-width: 1024px) {
+    /*--------------Inicio-----------------*/
+    .btnPhone {
+        display: none;
+    }
+    .header-menu-List {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        nav {
+            ul {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-evenly;
+                list-style: none;
+                align-items: center;
+                margin-bottom: 0;
+                li {
+                    border-right: 2px solid map-get($map: $paleta, $key: "Color_Bordes1");
+                    a {
+                        transition: .3s ease all;
+                        margin-right: 6px;
+                        font-size: 1.7rem;
+                        color: map-get($map: $paleta, $key: "Color_Negro");
+                        text-decoration: none;
+                        body.dark & {
+                            transition: .3s ease all;
+                            color: map-get($map: $paleta, $key: "Color_MDia");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container--slider {
+        .slider__img {
+            height: 500px;
+        }
+    }
+    /*-----------------Contacto------------------*/
+    .div-formulario {
+        gap: 40px;
+        height: 35rem;
+    }
+    .logos {
+        justify-content: space-evenly;
+    }
+    /*------------------Galeria------------------*/
+    /*------------------Productos------------------*/
+    /*------------------Productos------------------*/
+}

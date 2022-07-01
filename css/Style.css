@@ -1,3 +1,170 @@
+.Encabezado h1 a {
+  font-family: "Roboto Slab";
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease all;
+}
+body.dark .Encabezado h1 a {
+  color: rgb(225, 225, 225);
+  transition: 0.3s ease all;
+}
+
+.header-menu-List {
+  display: none;
+}
+
+.btnPhone {
+  display: flex;
+  align-items: center;
+}
+
+.btnPhone nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.btnPhone nav .btn-menu {
+  background-image: url(/img/icon/list.svg);
+  transition: 0.3s ease all;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+body.dark .btnPhone nav .btn-menu {
+  background-image: url(/img/icon/list_white.svg);
+  transition: 0.3s ease all;
+}
+.btnPhone nav .btn-menu_1 {
+  background-image: url(/img/icon/moon-fill.svg);
+  transition: 0.3s ease all;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+body.dark .btnPhone nav .btn-menu_1 {
+  transition: 0.3s ease all;
+  background-image: url(/img/icon/sun.svg);
+}
+
+.btn-menu_2 {
+  background-image: url(/img/icon/moon-fill.svg);
+  transition: 0.3s ease all;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+body.dark .btn-menu_2 {
+  transition: 0.3s ease all;
+  background-image: url(/img/icon/sun.svg);
+}
+
+.menu {
+  transition: 0.3s ease all;
+  background-color: transparent;
+}
+.menu .list {
+  display: flex;
+  flex-direction: column;
+}
+.menu .list a {
+  transition: 0.3s ease all;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  margin-top: 25px;
+  border-bottom: 1px solid rgb(230, 150, 1);
+}
+body.dark .menu .list a {
+  transition: 0.3s ease all;
+  color: rgb(225, 225, 225);
+}
+.menu .btn-cerrar-derecha {
+  text-align: center;
+  display: flex;
+  margin-right: 1.5rem;
+  justify-content: flex-end;
+}
+.menu .btn-cerrar-derecha button {
+  background-color: transparent;
+  color: #8696a0;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+body.dark .menu {
+  transition: 0.3s ease all;
+  background-color: #111b21;
+}
+
+/*------------------Menulist------------------*/
+html.menu_locked {
+  overflow: hidden;
+  touch-action: none;
+}
+html.menu_locked .menu_main_content.menu_blur {
+  filter: blur(15px);
+}
+
+.menu_overlay {
+  z-index: -999;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  will-change: opacity;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  background: #3c3442;
+}
+
+html.menu_locked .menu_overlay {
+  opacity: 0.8;
+  z-index: 999;
+}
+
+[data-menu-id] {
+  z-index: 1000;
+  position: fixed;
+  overflow-y: auto;
+  will-change: transform;
+  transition: transform 0.5s ease;
+  background: rgb(225, 225, 225);
+}
+
+[data-menu-direction=left][data-menu-id] {
+  top: 0;
+  width: 256px;
+  max-width: 100%;
+  height: 100%;
+}
+
+[data-menu-direction=left][data-menu-id] {
+  left: 0;
+  transform: translateZ(0) translateX(-100%);
+}
+
+[data-menu-id].opened {
+  display: block;
+  transform: translateX(0px) translateY(0px);
+}
+
 @-webkit-keyframes efectoRebote {
   0% {
     -webkit-animation-timing-function: ease-in;
@@ -40,6 +207,7 @@
     transform: translateX(0px);
   }
 }
+
 @keyframes efectoRebote {
   0% {
     -webkit-animation-timing-function: ease-in;
@@ -95,8 +263,7 @@ html {
 html p {
   font-size: 1.5rem;
 }
-
-body {
+html body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -104,124 +271,7 @@ body {
   -webkit-animation: efectoRebote 2s ease 0s 1 normal forwards;
           animation: efectoRebote 2s ease 0s 1 normal forwards;
 }
-body.dark {
-  transition: 0.3s ease all;
-  background-color: #111b21;
-}
-
-.Encabezado {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.Encabezado h1 a {
-  font-family: "Roboto Slab";
-  font-size: 3rem;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  transition: 0.3s ease all;
-}
-body.dark .Encabezado h1 a {
-  color: rgb(225, 225, 225);
-  transition: 0.3s ease all;
-}
-
-.header-menu-List {
-  display: none;
-}
-
-.btnPhone {
-  display: flex;
-  align-items: center;
-}
-
-.btnPhone nav {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-.btnPhone nav .btn-menu {
-  background-image: url(/img/icon/list.svg);
-  transition: 0.3s ease all;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 23px;
-  height: 23px;
-}
-body.dark .btnPhone nav .btn-menu {
-  background-image: url(/img/icon/list_white.svg);
-  transition: 0.3s ease all;
-}
-.btnPhone nav .btn-menu_1 {
-  transition: 0.3s ease all;
-  background-image: url(/img/icon/moon-fill.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 23px;
-  height: 23px;
-}
-body.dark .btnPhone nav .btn-menu_1 {
-  transition: 0.3s ease all;
-  background-image: url(/img/icon/sun.svg);
-}
-
-.btn-menu_2 {
-  transition: 0.3s ease all;
-  background-image: url(/img/icon/moon-fill.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
-body.dark .btn-menu_2 {
-  transition: 0.3s ease all;
-  background-image: url(/img/icon/sun.svg);
-}
-
-.menu {
-  transition: 0.3s ease all;
-  background: transparent;
-}
-.menu .list {
-  display: flex;
-  flex-direction: column;
-}
-.menu .list a {
-  transition: 0.3s ease all;
-  transition: all 200ms ease-out;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
-  margin-top: 25px;
-  border-bottom: 1px solid var(--just-white);
-  border-bottom: 1px solid rgb(230, 150, 1);
-}
-body.dark .menu .list a {
-  transition: 0.3s ease all;
-  color: rgb(225, 225, 225);
-}
-.menu .btn-cerrar-derecha {
-  text-align: center;
-  display: flex;
-  margin-right: 1.5rem;
-  justify-content: flex-end;
-}
-.menu .btn-cerrar-derecha button {
-  background: none;
-  color: #8696a0;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-}
-body.dark .menu {
+html body.dark {
   transition: 0.3s ease all;
   background-color: #111b21;
 }
@@ -229,7 +279,7 @@ body.dark .menu {
 /*------------------Inicio------------------*/
 .container--slider {
   width: 95%;
-  max-width: 120rem;
+  max-width: 110rem;
   margin: 2rem auto;
   box-shadow: 0 0 0 3px rgb(225, 225, 225), 0 10px 20px;
 }
@@ -245,14 +295,7 @@ body.dark .container--slider {
      object-fit: unset;
 }
 
-.carousel-control-next-icon {
-  background-color: rgb(0, 0, 0);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.carousel-control-prev-icon {
+.carousel-control-next-icon, .carousel-control-prev-icon {
   background-color: rgb(0, 0, 0);
   width: 30px;
   height: 30px;
@@ -319,22 +362,16 @@ body.dark .div-formulario {
   justify-content: space-around;
   align-items: center;
 }
-.div-formulario form input {
+.div-formulario form input, .div-formulario form textarea {
   width: 100%;
   height: 30px;
   border: 1px solid #fa4c06;
   transition: 0.3s ease all;
 }
-body.dark .div-formulario form input {
+body.dark .div-formulario form input, body.dark .div-formulario form textarea {
   transition: 0.3s ease all;
   background-color: #111b21;
   color: #8696a0;
-}
-.div-formulario form textarea {
-  transition: 0.3s ease all;
-  width: 100%;
-  height: 60px;
-  border: 1px solid #fa4c06;
 }
 body.dark .div-formulario form textarea {
   transition: 0.3s ease all;
@@ -343,8 +380,25 @@ body.dark .div-formulario form textarea {
 }
 .div-formulario form .boton {
   transition: 0.3s ease all;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #fa4c06;
   color: rgb(225, 225, 225);
+  border: #fa4c06;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+body.dark .div-formulario form .boton {
+  transition: 0.3s ease all;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #111b21;
+  color: rgb(225, 225, 225);
+  border: 1px solid #fa4c06;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
 }
 body.dark .div-formulario form .boton a {
   transition: 0.3s ease all;
@@ -398,7 +452,7 @@ body.dark .logos h2 a {
   height: 450px;
 }
 
-/*------------------Productos------------------*/
+/*------------------Galeria------------------*/
 .productos-V2 div {
   display: flex;
   padding: 5px;
@@ -423,74 +477,6 @@ body.dark footer div p {
   color: rgb(225, 225, 225);
 }
 
-/*------------------Menulist------------------*/
-html.menu_locked {
-  overflow: hidden;
-  touch-action: none;
-}
-html.menu_locked .menu_main_content.menu_blur {
-  filter: blur(15px);
-}
-
-.menu_overlay {
-  z-index: -999;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  will-change: opacity;
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  background: #3c3442;
-}
-
-html.menu_locked .menu_overlay {
-  opacity: 0.8;
-  z-index: 999;
-}
-
-[data-menu-id] {
-  z-index: 1000;
-  position: fixed;
-  overflow-y: auto;
-  will-change: transform;
-  transition: transform 0.5s ease;
-  background: rgb(225, 225, 225);
-}
-
-[data-menu-direction=left][data-menu-id] {
-  top: 0;
-  width: 256px;
-  max-width: 100%;
-  height: 100%;
-}
-
-[data-menu-direction=left][data-menu-id] {
-  left: 0;
-  transform: translateZ(0) translateX(-100%);
-}
-
-[data-menu-id].opened {
-  display: block;
-  transform: translateX(0px) translateY(0px);
-}
-
-@media screen and (max-width: 360px) {
-  .header div p {
-    display: none;
-  }
-}
-@media screen and (max-width: 400px) {
-  .productos-V2 {
-    grid-template-columns: auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  .productos-V2 {
-    grid-template-columns: auto auto;
-  }
-}
 @media screen and (min-width: 1024px) {
   /*--------------Inicio-----------------*/
   .btnPhone {
@@ -510,6 +496,9 @@ html.menu_locked .menu_overlay {
     list-style: none;
     align-items: center;
     margin-bottom: 0;
+  }
+  .header-menu-List nav ul li {
+    border-right: 2px solid rgb(230, 150, 1);
   }
   .header-menu-List nav ul li a {
     transition: 0.3s ease all;
@@ -538,5 +527,6 @@ html.menu_locked .menu_overlay {
   }
 
   /*------------------Galeria------------------*/
+  /*------------------Productos------------------*/
   /*------------------Productos------------------*/
 }/*# sourceMappingURL=style.css.map */

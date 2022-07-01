@@ -1,0 +1,15 @@
+Documento Explicativo del SEO
+
+Cosas Modificadas: Parti el archivo Style.scss en varias partes: _header, _main, _footer, _mediaqry.
+También archivos .sass para animaciones, colores y botones(mixins).
+
+Header: Se encuentra el encabezado de todas las páginas.
+Main: Se encuentra el main de todas las páginas.
+Footer: Se encuentra el pie de página. 
+Animaciones: se encuentran las animaciones que sean aplicadas en las páginas.
+botones: se encuentra un mixin para aplicar en todos los botones que están en el sitio y poder modificar a gusto.
+
+
+Cosas agregadas: agregue “extend” en Contactos/from/input.
+Agregue map-get en “_colores.sass”.
+Agregue a  Keywords, descripción, títulos y encabezado a todas las páginas para mejorar el SEO.
