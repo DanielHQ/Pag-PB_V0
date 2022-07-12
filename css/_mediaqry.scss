@@ -1,4 +1,12 @@
 @import 'colores';
+@media screen and (max-width: 500px) {
+    .Encabezado {
+        div {
+            height: 60px;
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     /*--------------Inicio-----------------*/
     .btnPhone {
@@ -8,7 +16,9 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        height: 100%;
         nav {
+            height: 100%;
             ul {
                 display: flex;
                 width: 100%;
@@ -17,12 +27,17 @@
                 list-style: none;
                 align-items: center;
                 margin-bottom: 0;
+                height: 100%;
                 li {
+                    display: flex;
                     border-right: 2px solid map-get($map: $paleta, $key: "Color_Bordes1");
+                    transform: skew(-35deg, 0deg);
+                    height: 100%;
+                    align-items: center;
                     a {
                         transition: .3s ease all;
                         margin-right: 6px;
-                        font-size: 1.7rem;
+                        font-size: 2rem;
                         color: map-get($map: $paleta, $key: "Color_Negro");
                         text-decoration: none;
                         body.dark & {

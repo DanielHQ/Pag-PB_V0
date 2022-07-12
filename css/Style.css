@@ -1,11 +1,18 @@
-.Encabezado h1 a {
+.Encabezado div {
+  height: 40px;
+}
+.Encabezado div .Encabezado-Titulo {
+  display: flex;
+  align-items: center;
+}
+.Encabezado div .Encabezado-Titulo h1 a {
   font-family: "Roboto Slab";
   font-size: 3rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
   transition: 0.3s ease all;
 }
-body.dark .Encabezado h1 a {
+body.dark .Encabezado div .Encabezado-Titulo h1 a {
   color: rgb(225, 225, 225);
   transition: 0.3s ease all;
 }
@@ -167,87 +174,23 @@ html.menu_locked .menu_overlay {
 
 @-webkit-keyframes efectoRebote {
   0% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-    transform: translateX(-48px);
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-26px);
-  }
-  65% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-13px);
-  }
-  82% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-6.5px);
-  }
-  93% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-4px);
-  }
-  25%, 55%, 75%, 87%, 98% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    transform: translateX(0px);
+    opacity: 0;
+    transform: translateX(-250px);
   }
   100% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 
 @keyframes efectoRebote {
   0% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-    transform: translateX(-48px);
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-26px);
-  }
-  65% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-13px);
-  }
-  82% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-6.5px);
-  }
-  93% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-4px);
-  }
-  25%, 55%, 75%, 87%, 98% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    transform: translateX(0px);
+    opacity: 0;
+    transform: translateX(-250px);
   }
   100% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 * {
@@ -268,8 +211,8 @@ html body {
   flex-direction: column;
   min-height: 100vh;
   transition: 0.3s ease all;
-  -webkit-animation: efectoRebote 2s ease 0s 1 normal forwards;
-          animation: efectoRebote 2s ease 0s 1 normal forwards;
+  -webkit-animation: efectoRebote 0.5s linear 0s 1 normal none;
+          animation: efectoRebote 0.5s linear 0s 1 normal none;
 }
 html body.dark {
   transition: 0.3s ease all;
@@ -477,16 +420,24 @@ body.dark footer div p {
   color: rgb(225, 225, 225);
 }
 
+@media screen and (max-width: 500px) {
+  .Encabezado div {
+    height: 60px;
+  }
+}
 @media screen and (min-width: 1024px) {
   /*--------------Inicio-----------------*/
   .btnPhone {
     display: none;
   }
-
   .header-menu-List {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
+  }
+  .header-menu-List nav {
+    height: 100%;
   }
   .header-menu-List nav ul {
     display: flex;
@@ -496,14 +447,19 @@ body.dark footer div p {
     list-style: none;
     align-items: center;
     margin-bottom: 0;
+    height: 100%;
   }
   .header-menu-List nav ul li {
+    display: flex;
     border-right: 2px solid rgb(230, 150, 1);
+    transform: skew(-35deg, 0deg);
+    height: 100%;
+    align-items: center;
   }
   .header-menu-List nav ul li a {
     transition: 0.3s ease all;
     margin-right: 6px;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: rgb(0, 0, 0);
     text-decoration: none;
   }
@@ -511,21 +467,17 @@ body.dark footer div p {
     transition: 0.3s ease all;
     color: rgb(225, 225, 225);
   }
-
   .container--slider .slider__img {
     height: 500px;
   }
-
   /*-----------------Contacto------------------*/
   .div-formulario {
     gap: 40px;
     height: 35rem;
   }
-
   .logos {
     justify-content: space-evenly;
   }
-
   /*------------------Galeria------------------*/
   /*------------------Productos------------------*/
   /*------------------Productos------------------*/

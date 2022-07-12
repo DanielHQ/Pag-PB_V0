@@ -2,16 +2,23 @@
 @import 'colores';
 // --------------------------------------------------------------------------
 .Encabezado {
-    h1 {
-        a {
-            font-family: "Roboto Slab";
-            font-size: 3rem;
-            text-decoration: none;
-            color: map-get($map: $paleta, $key: "Color_Negro");
-            transition: .3s ease all;
-            body.dark & {
-                color: map-get($map: $paleta, $key: "Color_MDia");
-                transition: .3s ease all;
+    div {
+        height: 40px;
+        .Encabezado-Titulo {
+            display: flex;
+            align-items: center;
+            h1 {
+                a {
+                    font-family: "Roboto Slab";
+                    font-size: 3rem;
+                    text-decoration: none;
+                    color: map-get($map: $paleta, $key: "Color_Negro");
+                    transition: .3s ease all;
+                    body.dark & {
+                        color: map-get($map: $paleta, $key: "Color_MDia");
+                        transition: .3s ease all;
+                    }
+                }
             }
         }
     }
