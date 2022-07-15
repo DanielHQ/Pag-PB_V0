@@ -406,13 +406,6 @@ body.dark .logos h2 a {
 }
 
 /*------------------PREGUNTAS------------------*/
-.titulo {
-  color: #3a3a3a;
-  font-weight: 700;
-  text-align: center;
-  margin: 60px 0;
-}
-
 .categorias {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -430,19 +423,35 @@ body.dark .logos h2 a {
   border: 2px solid transparent;
   transition: 0.5s ease all;
 }
+body.dark .categorias .categoria {
+  transition: 0.3s ease all;
+  background-color: #202c33;
+}
 .categorias .categoria:hover {
   transition: 0.5s ease all;
   box-shadow: 0 0 20px 0 rgba(58, 60, 60, 0.25);
   color: #3a3a3a;
   border: 2px solid #e23939;
+  fill: #e23939;
+}
+body.dark .categorias .categoria:hover {
+  color: #fff;
+  border: 2px solid rgb(230, 150, 1);
+  fill: rgb(230, 150, 1);
 }
 .categorias .categoria.activa {
   border: 2px solid #e23939;
   color: #3a3a3a;
   box-shadow: 0 0 20px 0 rgba(58, 60, 60, 0.25);
+  fill: #e23939;
 }
-.categorias .categoria img {
-  width: 35px;
+body.dark .categorias .categoria.activa {
+  color: #fff;
+  border: 2px solid rgb(230, 150, 1);
+  fill: rgb(230, 150, 1);
+}
+.categorias .categoria svg {
+  width: 50px;
   margin-bottom: 10px;
 }
 
@@ -463,6 +472,11 @@ body.dark .logos h2 a {
   overflow: hidden;
   transition: 0.5s ease all;
   cursor: pointer;
+}
+body.dark .contenedor-preguntas .contenedor-pregunta {
+  transition: 0.3s ease all;
+  background-color: #202c33;
+  color: #fff;
 }
 .contenedor-preguntas .contenedor-pregunta:hover {
   box-shadow: 0 0 20px 0 rgba(58, 60, 60, 0.25);
@@ -496,6 +510,7 @@ body.dark .logos h2 a {
   opacity: 0;
   transition: 0.5s ease all;
 }
+
 footer {
   border-top: solid 1.2px #8696a0;
   margin-top: auto;
@@ -577,7 +592,7 @@ body.dark footer div p {
     justify-content: center;
     border-radius: 5px;
   }
-  .categorias .categoria img {
+  .categorias .categoria svg {
     width: 30px;
     margin-right: 10px;
     margin-bottom: 0px;
