@@ -430,7 +430,7 @@ body.dark .categorias .categoria {
 .categorias .categoria:hover {
   transition: 0.5s ease all;
   box-shadow: 0 0 20px 0 rgba(58, 60, 60, 0.25);
-  color: #3a3a3a;
+  color: #1b1b1b;
   border: 2px solid #e23939;
   fill: #e23939;
 }
@@ -482,7 +482,7 @@ body.dark .contenedor-preguntas .contenedor-pregunta {
   box-shadow: 0 0 20px 0 rgba(58, 60, 60, 0.25);
 }
 .contenedor-preguntas .contenedor-pregunta.activa {
-  border: 2px solid #e23939;
+  border: 2px solid rgb(230, 150, 1);
   box-shadow: 0 0 20px 0 rgba(58, 60, 60, 0.25);
 }
 .contenedor-preguntas .contenedor-pregunta.activa .respuestas {

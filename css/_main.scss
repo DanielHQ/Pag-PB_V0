@@ -245,7 +245,7 @@ html {
         &:hover {
             transition: .5s ease all;
             box-shadow: map-get($map: $paleta, $key: "-shadown");
-            color: #3a3a3a;
+            color: #1b1b1b;
             border: 2px solid map-get($map: $paleta, $key: "-primario");
             fill: map-get($map: $paleta, $key: "-primario");
             body.dark & {
@@ -297,7 +297,7 @@ html {
             box-shadow: map-get($map: $paleta, $key: "-shadown");
         }
         &.activa {
-            border: 2px solid map-get($map: $paleta, $key: "-primario");
+            border: 2px solid map-get($map: $paleta, $key: "Color_Bordes1");
             box-shadow: map-get($map: $paleta, $key: "-shadown");
         }
         &.activa .respuestas {
