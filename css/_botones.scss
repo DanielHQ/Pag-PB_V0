@@ -1,0 +1,11 @@
+@mixin Botones_header($size: 35px, $fondo: transparent, $border: none, $color: black) {
+    transition: .3s ease all;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $fondo;
+    color: $color;
+    border: $border;
+    cursor: pointer;
+    width: $size;
+    height: $size;
+}

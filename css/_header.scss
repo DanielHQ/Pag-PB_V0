@@ -1,0 +1,154 @@
+@import 'botones';
+@import 'colores';
+// --------------------------------------------------------------------------
+.Encabezado {
+    background-color: #ff3939;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    div {
+        width: 100%;
+    }
+}
+
+.header-menu-List {
+    display: none;
+}
+
+.btnPhone {
+    width: 100%;
+    align-items: center;
+}
+
+.btnPhone {
+    width: 100%;
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn-menu {
+            background-image: url(/img/icon/list_white.svg);
+            @include Botones_header();
+            body.dark & {
+                background-image: url(/img/icon/list_white.svg);
+                transition: .3s ease all;
+            }
+        }
+        a{
+            display: flex;
+        }
+        .btn-menu_1 {
+            background-image: url(/img/icon/eclipse-alt\ \(1\).svg);
+            @include Botones_header();
+            margin-right: 5px;
+            body.dark & {
+                background-image: url(/img/icon/eclipse-alt.svg);
+                transition: .3s ease all;
+            }
+        }
+    }
+}
+
+.btn-menu_2 {
+    background-image: url(/img/icon/eclipse-alt\ \(1\).svg);
+    @include Botones_header($size: 20px);
+    body.dark & {
+        transition: .3s ease all;
+        background-image: url(/img/icon/eclipse-alt.svg);
+    }
+}
+
+.menu {
+    transition: .3s ease all;
+    background-color: transparent;
+    .list {
+        display: flex;
+        flex-direction: column;
+        a {
+            transition: .3s ease all;
+            text-decoration: none;
+            color: map-get($map: $paleta, $key: "Color_Negro");
+            font-size: 2rem;
+            margin-top: 25px;
+            border-bottom: 1px solid map-get($map: $paleta, $key: "Color_Bordes1");
+            body.dark & {
+                transition: .3s ease all;
+                color: map-get($map: $paleta, $key: "Color_MDia");
+            }
+        }
+    }
+    .btn-cerrar-derecha {
+        text-align: center;
+        display: flex;
+        margin-right: 1.5rem;
+        justify-content: flex-end;
+        button {
+            background-color: transparent;
+            color: map-get($map: $paleta, $key: "Color_Letras2");
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    }
+    body.dark & {
+        transition: .3s ease all;
+        background-color: map-get($map: $paleta, $key: "Color_MNoche1");
+    }
+}
+
+
+/*------------------Menulist------------------*/
+
+html.menu_locked {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    .menu_main_content.menu_blur {
+        filter: blur(15px);
+    }
+}
+
+.menu_overlay {
+    z-index: -999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    will-change: opacity;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    background: #3c3442;
+}
+
+html.menu_locked .menu_overlay {
+    opacity: 0.8;
+    z-index: 999;
+}
+
+[data-menu-id] {
+    z-index: 1000;
+    position: fixed;
+    overflow-y: auto;
+    will-change: transform;
+    transition: transform 0.5s ease;
+    background: map-get($map: $paleta, $key: "Color_MDia");
+}
+
+[data-menu-direction="left"][data-menu-id] {
+    top: 0;
+    width: 256px;
+    max-width: 100%;
+    height: 100%;
+}
+
+[data-menu-direction="left"][data-menu-id] {
+    left: 0;
+    transform: translateZ(0) translateX(-100%);
+}
+
+[data-menu-id].opened {
+    display: block;
+    transform: translateX(0px) translateY(0px);
+}

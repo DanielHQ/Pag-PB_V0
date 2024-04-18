@@ -1,0 +1,15 @@
+@import 'colores';
+footer {
+    border-top: solid 1.2px map-get($map: $paleta, $key: "Color_Letras2");
+    margin-top: auto;
+    div {
+        margin: 5px;
+        p {
+            transition: .3s ease all;
+            body.dark & {
+                transition: .3s ease all;
+                color: map-get($map: $paleta, $key: "Color_MDia");
+            }
+        }
+    }
+}
