@@ -194,8 +194,11 @@ html {
 html p {
   font-size: 1.5rem;
 }
+html body {
+  display: block;
+}
 html body main {
-  background-image: linear-gradient(red, transparent);
+  background-image: linear-gradient(#ff3939, transparent);
 }
 html body.dark {
   transition: 0.3s ease all;
@@ -203,6 +206,135 @@ html body.dark {
 }
 
 /*------------------Inicio------------------*/
+.carousel {
+  padding: 2rem 2rem 0rem;
+}
+
+:root {
+  --primario: #e23939;
+  --gris-claro:#B8B8B8;
+  --sombra: 0 0 13px 0 rgba(185,185,185, .25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.titulo {
+  color: #3a3a3a;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/*! =================================================*/
+/*! ============= Categorias ============= */
+/*! =================================================*/
+.categorias {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
+.categoria {
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+  font-weight: 700;
+  color: var(--primario);
+  border: 2px solid transparent;
+  transition: 0.3s ease all;
+}
+
+.categoria:hover {
+  box-shadow: var(--sombra);
+  color: #000;
+}
+
+.categoria img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.categoria.activa {
+  border: 2px solid var(--primario);
+  color: #000;
+}
+
+/*! =================================================*/
+/*! ============= Contenedor Preguntas ============= */
+/*! =================================================*/
+.contenedor-preguntas {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.contenedor-preguntas.activo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contenedor-pregunta {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background: #fff;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+.contenedor-pregunta img {
+  margin: auto;
+  width: 100%;
+}
+.contenedor-pregunta .descripcion {
+  border-top: 0.5px solid gray;
+}
+.contenedor-pregunta .precio {
+  text-align: left;
+  color: #3a3a3a;
+  font-weight: 700;
+  margin: 3px 0;
+}
+
+.contenedor-pregunta:hover {
+  box-shadow: var(--sombra);
+}
+
+.contenedor-pregunta.activa {
+  border: 2px solid var(--primario);
+}
+
+/*! =================================================*/
+/*! ============= Preguntas ============= */
+/*! =================================================*/
+.contenedor-pregunta.activa .respuesta {
+  opacity: 1;
+  margin-top: 20px;
+}
+
+/*! =================================================*/
+/*! ============= Responsive Design ============= */
+/*! =================================================*/
+@media screen and (max-width: 820px) {
+  .categoria svg {
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
 footer {
   border-top: solid 1.2px #8696a0;
   margin-top: auto;
