@@ -115,7 +115,7 @@ body.dark .menu .list a {
 }
 body.dark .menu {
   transition: 0.3s ease all;
-  background-color: #111b21;
+  background-color: #6f6f6f;
 }
 
 /*------------------Menulist------------------*/
@@ -198,11 +198,12 @@ html body {
   display: block;
 }
 html body main {
-  background-image: linear-gradient(#ff3939, transparent);
+  background-image: linear-gradient(#ff3939, transparent 30%);
+  margin-bottom: 20px;
 }
 html body.dark {
   transition: 0.3s ease all;
-  background-color: #111b21;
+  background-color: #6f6f6f;
 }
 
 /*------------------Inicio------------------*/
@@ -286,27 +287,46 @@ html body.dark {
 .contenedor-pregunta {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 150px;
-  background: #fff;
-  padding: 4px;
-  border: 2px solid transparent;
-  border-radius: 10px;
+  background: white;
+  padding: 0px 15px;
+  border: 0.5px solid transparent;
+  border-radius: 5px;
   overflow: hidden;
   transition: 0.3s ease all;
   cursor: pointer;
 }
 .contenedor-pregunta img {
-  margin: auto;
+  margin: 5px auto;
   width: 100%;
 }
 .contenedor-pregunta .descripcion {
   border-top: 0.5px solid gray;
 }
+.contenedor-pregunta .descripcion_simone {
+  border-top: 0.5px solid gray;
+  text-align: center;
+}
 .contenedor-pregunta .precio {
   text-align: left;
   color: #3a3a3a;
-  font-weight: 700;
-  margin: 3px 0;
+  font-weight: 300;
+}
+.contenedor-pregunta .precioOff {
+  color: green;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.contenedor-pregunta .precio_simone {
+  color: green;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+body.dark .contenedor-pregunta {
+  transition: 0.3s ease all;
+  background-color: #c1c1c1;
 }
 
 .contenedor-pregunta:hover {
@@ -338,8 +358,11 @@ html body.dark {
 footer {
   border-top: solid 1.2px #8696a0;
   margin-top: auto;
+  background-color: transparent;
 }
 footer div {
+  display: flex;
+  justify-content: center;
   margin: 5px;
 }
 footer div p {
@@ -348,6 +371,11 @@ footer div p {
 body.dark footer div p {
   transition: 0.3s ease all;
   color: rgb(225, 225, 225);
+}
+footer .redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 @media screen and (min-width: 1024px) {

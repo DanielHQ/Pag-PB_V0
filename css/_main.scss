@@ -15,7 +15,8 @@ html {
     }
     body {
         main{
-            background-image: linear-gradient(#ff3939, transparent);
+            background-image: linear-gradient( #ff3939, transparent 30%);
+			margin-bottom: 20px;
         }
         display: block;
         &.dark {
@@ -110,27 +111,46 @@ html {
 .contenedor-pregunta {
     display: flex;
     flex-direction: column;
+	justify-content: space-between;
     width: 150px;
-	background: #fff;
-	padding: 4px;
-	border: 2px solid transparent;
-	border-radius: 10px;
+	background: white;
+	padding: 0px 15px;
+	border: 0.5px solid transparent;
+	border-radius: 5px;
 	overflow: hidden;
 	transition: .3s ease all;
 	cursor: pointer;
     img{
-        margin: auto;
+        margin: 5px auto;
         width: 100%;
     }
     .descripcion{
         border-top: 0.5px solid gray;
     }
+	.descripcion_simone{
+		border-top: 0.5px solid gray;
+		text-align: center;
+	}
     .precio{
         text-align: left;
         color: #3a3a3a;
-        font-weight: 700;
-        margin: 3px 0;
+        font-weight: 300;
     }
+	.precioOff{
+		color: green;
+		font-size: 1.8rem;
+		font-weight: 800;
+	}
+	.precio_simone{
+		color: green;
+		font-size: 1.8rem;
+		font-weight: 800;
+		text-align: center;
+	}
+	body.dark & {
+		transition: .3s ease all;
+		background-color: #c1c1c1;
+	}
 }
 
 .contenedor-pregunta:hover {

@@ -2,7 +2,10 @@
 footer {
     border-top: solid 1.2px map-get($map: $paleta, $key: "Color_Letras2");
     margin-top: auto;
+    background-color: transparent;
     div {
+        display: flex;
+        justify-content: center;
         margin: 5px;
         p {
             transition: .3s ease all;
@@ -11,5 +14,10 @@ footer {
                 color: map-get($map: $paleta, $key: "Color_MDia");
             }
         }
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
