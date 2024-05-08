@@ -227,45 +227,94 @@ html body.dark {
   color: #3a3a3a;
   font-weight: 700;
   text-align: center;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 /*! =================================================*/
 /*! ============= Categorias ============= */
 /*! =================================================*/
-.categorias {
+.menu-p {
   display: flex;
   justify-content: space-evenly;
-  gap: 5px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+}
+.menu-p .indicador {
+  position: absolute;
+  top: -64%;
+  width: 70px;
+  height: 70px;
+  background: rgb(254, 137, 3);
+  border-radius: 50%;
+  border: 5px solid rgb(254, 137, 3);
+  transition: 0.5s;
 }
 
-.categoria {
+.categorias {
+  position: relative;
+  width: 370px;
+  height: 70px;
+  background-color: rgb(254, 133, 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categorias ul {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+.categorias ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.categorias ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  cursor: pointer;
+  width: 100%;
   text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  background: transparent;
-  font-weight: 700;
-  color: var(--primario);
-  border: 2px solid transparent;
-  transition: 0.3s ease all;
+  font-weight: 500;
 }
-
-.categoria:hover {
-  box-shadow: var(--sombra);
-  color: #000;
+.categorias ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 55px;
+  text-align: center;
+  transition: 0.5s;
 }
-
-.categoria img {
-  width: 60px;
-  margin-bottom: 10px;
+.categorias ul li a .text {
+  position: absolute;
+  color: #3a3a3a;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
 }
-
-.categoria.activa {
-  border: 2px solid var(--primario);
-  color: #000;
+.categorias ul li.active a .icon {
+  transform: translateY(-45px);
+  cursor: pointer;
+}
+.categorias ul li.active a .text {
+  opacity: 1;
+  cursor: pointer;
+  transform: translateY(10px);
+}
+.categorias ul li:nth-child(1).active ~ .indicador {
+  transform: translatex(0px);
+}
+.categorias ul li:nth-child(2).active ~ .indicador {
+  transform: translatex(86.7px);
+}
+.categorias ul li:nth-child(3).active ~ .indicador {
+  transform: translatex(173.4px);
+}
+.categorias ul li:nth-child(4).active ~ .indicador {
+  transform: translatex(260.1px);
 }
 
 /*! =================================================*/
