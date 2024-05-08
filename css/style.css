@@ -268,7 +268,7 @@ body.dark .menu-p .indicador {
 }
 body.dark .menu-p .indicador::before {
   transition: 0.3s ease all;
-  box-shadow: -0.5px -10px 0 0 #6f6f6f;
+  box-shadow: 0.5px -10px 0 0 #6f6f6f;
 }
 .menu-p .indicador::after {
   content: "";
