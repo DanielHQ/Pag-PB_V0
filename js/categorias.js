@@ -23,7 +23,7 @@ categorias.forEach((categoria) => {
 	});
 });
 
-const list = document.querySelectorAll('.list');
+const list = document.querySelectorAll('.lista');
 function activeLink(){
 	list.forEach((item) => 
 item.classList.remove('active'));

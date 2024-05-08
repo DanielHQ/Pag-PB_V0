@@ -15,8 +15,10 @@ html {
     }
     body {
         main{
-            background-image: linear-gradient( #ff3939, transparent 30%);
 			margin-bottom: 20px;
+			.fondo-d{
+				background-image: linear-gradient( #ff3939, transparent);
+			}
         }
         display: block;
         &.dark {
@@ -29,7 +31,7 @@ html {
 
 /*------------------Inicio------------------*/
 .carousel{
-    padding: 2rem 2rem 0rem;
+    padding: 2rem 2rem 2rem;
 }
 
 :root {
@@ -61,19 +63,53 @@ html {
 	margin-bottom: 20px;
 	.indicador{
 		position: absolute;
-		top: -64%;
+		top: -66.8%;
 		width: 70px;
 		height: 70px;
-		background:rgb(254, 137, 3);
+		background:rgb(247, 247, 247);
 		border-radius: 50%;
-		border: 5px solid rgb(254, 137, 3);
-		transition: 0.5s;
+		border: 10px solid rgb(255, 255, 255);
+		transition: 0.3s;
+		body.dark & {
+			transition: .3s ease all;
+			background-color: map-get($map: $paleta, $key: "Color_MNoche1");
+			border: 10px solid map-get($map: $paleta, $key: "Color_MNoche1")}
 	}
+	.indicador::before{
+		content: '';
+		position: absolute;
+		top: 73%;
+		left: -25px;
+		width: 25px;
+		height: 20px;
+		background: transparent;
+		border-top-right-radius: 20px;
+		box-shadow: 1px -10px 0 0 white;
+		body.dark & {
+			transition: .3s ease all;
+			box-shadow: -0.5px -10px 0 0 #6f6f6f;
+	}
+	}
+	.indicador::after{
+	content: '';
+	position: absolute;
+	top: 73%;
+	left: 50.04px;
+	width: 24px;
+	height: 20px;
+	background: transparent;
+	border-top-left-radius: 20px;
+	box-shadow: -0.5px -10px 0 0 white;
+	body.dark & {
+		transition: .3s ease all;
+		box-shadow: -0.5px -10px 0 0 #6f6f6f;
+}
+}
 }
 
 .categorias{
 	position: relative;
-	width: 370px;
+	width: 400px;
 	height: 70px;
 	background-color:rgb(254, 133, 3);
 	display: flex;
@@ -83,6 +119,7 @@ html {
 		display: flex;
 		justify-content: space-between;
 		width: 350px;
+		padding: 0px;
 		li{
 			position: relative;
 			list-style: none;
@@ -98,6 +135,7 @@ html {
 				width: 100%;
 				text-align: center;
 				font-weight: 500;
+				cursor: pointer;
 				.icon{
 					position: relative;
 					display: block;
@@ -125,6 +163,7 @@ html {
 					opacity: 1;
 					cursor: pointer;
 					transform: translateY(10px);
+					color:rgb(111, 0, 0);
 				}
 			}
 		}
@@ -132,22 +171,22 @@ html {
 	ul{
 		li:nth-child(1).active ~{
 			.indicador{
-				transform: translatex(calc(86.7px * 0));
+				transform: translatex(calc(93.2px * 0));
 			}
 		}
 		li:nth-child(2).active ~{
 			.indicador{
-				transform: translatex(calc(86.7px * 1));
+				transform: translatex(calc(93.2px * 1));
 			}
 		}
 		li:nth-child(3).active ~{
 			.indicador{
-				transform: translatex(calc(86.7px * 2));
+				transform: translatex(calc(93.2px * 2));
 			}
 		}
 		li:nth-child(4).active ~{
 			.indicador{
-				transform: translatex(calc(86.7px * 3));
+				transform: translatex(calc(93.2px * 3));
 			}
 		}
 	}
