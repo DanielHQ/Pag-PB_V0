@@ -18,6 +18,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@
                         <button data-menu-close><i class="fas fa-times"></i></button>
                     </div>
                     <nav class="list">
-                        <a href="" class="h4 pb-2 mb-4 text-danger border-bottom border-danger">Saber sobre Habitue</a>
+                        <a href="/pages/sobreHabi.html" class="h4 pb-2 mb-4 text-danger border-bottom border-danger">Habitue</a>
                         <a href="" class="h4 pb-2 mb-4 text-danger border-bottom border-danger">Preguntas y respuestas</a>
                         <a href="" class="h4 pb-2 mb-4 text-danger border-bottom border-danger"></a>
                     </nav>
@@ -176,7 +177,7 @@
                     <img src="/img/logo/stella330.png" alt="" width="100px">
 					<p class="descripcion">Stella 330cm</p>
                     <p class="precio"><strike>$ 1.300</strike></p>
-                    <p class="precioOff"><b>$ 1.000</b></p>
+                    <p class="precioOff"><b>$ 00</b></p>
 				</div>
                 <div class="contenedor-pregunta shadow">
                     <img src="/img/logo/340Retornable.png" alt="" width="100px">
@@ -188,25 +189,57 @@
 
 			<!-- SIMONE -->
 			<div class="contenedor-preguntas" data-categoria="entregas">
-                <div class="contenedor-pregunta shadow">
+                <div class="contenedor-simone shadow">
                     <img src="/img/logo/promoSimone.png" alt="" width="100px">
-					<p class="descripcion_simone">Cono grande + mediano.</p>
-                    <p class="precio_simone">$ 4.500</p>
+                    <div class="precio">
+                        <p class="descripcion_simone-l">Cono grande + cono mediano.</p>
+                        <p class="precio_simone">$ 4.500</p>
+                    </div>
+                    <div class="stock-c">
+                        <p>Coronel Lopez 629 </p><i class="fi fi-rr-check"></i>
+                    </div>
+                    <div class="stock-m">
+                        <p>Madariaga 809</p><i class="fi fi-rr-cross"></i>
+                    </div>
 				</div>
-                <div class="contenedor-pregunta shadow">
+                <div class="contenedor-simone shadow">
                     <img src="/img/logo/conoGrande.png" alt="" width="100px">
-					<p class="descripcion_simone">Cono grande</p>
-                    <p class="precio_simone">$ 3.800</p>
+                    <div class="precio">
+                        <p class="descripcion_simone-c">Cono grande.</p>
+                        <p class="precio_simone">$ 3.800</p>
+                    </div>
+                    <div class="stock-c">
+                        <p>Coronel Lopez 629 </p><i class="fi fi-rr-check"></i>
+                    </div>
+                    <div class="stock-m">
+                        <p>Madariaga 809</p><i class="fi fi-rr-check"></i>
+                    </div>
 				</div>
-                <div class="contenedor-pregunta shadow">
+                <div class="contenedor-simone shadow">
                     <img src="/img/logo/conoMediano.png" alt="" width="100px">
-					<p class="descripcion_simone">Cono mediano</p>
-                    <p class="precio_simone">$ 3.300</p>
+                    <div class="precio">
+                        <p class="descripcion_simone-c">Cono mediano.</p>
+                        <p class="precio_simone">$ 3.300</p>
+                    </div>
+                    <div class="stock-c">
+                        <p>Coronel Lopez 629 </p><i class="fi fi-rr-check"></i>
+                    </div>
+                    <div class="stock-m">
+                        <p>Madariaga 809</p><i class="fi fi-rr-check"></i>
+                    </div>
 				</div>
-                <div class="contenedor-pregunta shadow">
+                <div class="contenedor-simone shadow">
                     <img src="/img/logo/conoC+L.png" alt="" width="100px">
-					<p class="descripcion_simone">Cono chico + Pepsi lata</p>
-                    <p class="precio_simone">$ 2.500</p>
+                    <div class="precio">
+                        <p class="descripcion_simone-l">Cono chico + Lata Pepsi.</p>
+                        <p class="precio_simone">$ 2.500</p>
+                    </div>
+                    <div class="stock-c">
+                        <p>Coronel Lopez 629 </p><i class="fi fi-rr-check"></i>
+                    </div>
+                    <div class="stock-m">
+                        <p>Madariaga 809</p><i class="fi fi-rr-cross"></i>
+                    </div>
 				</div>
 			</div>
 
@@ -270,13 +303,13 @@
     </main>
     <footer>
         <!-- Pie de pagina, derechos reservados -->
-        <div>
-            <p> Copyright© Habitue 2022-20XX.<br> Todos los derechos reservados</p>
-        </div>
         <div class="redes">
             <a href="https://www.facebook.com/habitue.maxikiosco">
                 <img src="/img/icon/icons8-facebook-nuevo-50.png" alt="">
             </a>
+            <div>
+                <p> Copyright© Habitue 2022-20XX.<br> Todos los derechos reservados</p>
+            </div>
             <a href="https://www.instagram.com/habitue_maxikiosco/?fbclid=IwZXh0bgNhZW0CMTAAAR0VlYSNb6Vap_Q922VblYsIkS_xUxTcbhE-8EXYFONdZy8-60a30lATQn0_aem_AaJ9XsHMZ1Dx-E5Ycip2wpj8mUzd3KsC1ubUsP5fLMacylUuMWqgshBwJ5ZDHi1uaZfLhg9jrxx0cPWyQ8ddvr0N">
                 <img src="/img/icon/icons8-instagram-50.png" alt="">
             </a>
