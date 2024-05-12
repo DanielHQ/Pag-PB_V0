@@ -1,5 +1,5 @@
 const categorias = document.querySelectorAll('#categorias .categoria');
-const contenedorPreguntas = document.querySelectorAll('.contenedor-preguntas');
+const contenedorPreguntas = document.querySelectorAll('.contenedor-preguntas, .cervezas');
 let categoriaActiva = null;
 
 categorias.forEach((categoria) => {

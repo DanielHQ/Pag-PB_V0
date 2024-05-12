@@ -1,7 +1,7 @@
-const preguntas = document.querySelectorAll('.preguntas .cervezas .contenedor-pregunta');
-preguntas.forEach((pregunta) => {
+const submarca = document.querySelectorAll('.submarca .contenedor-pregunta');
+submarca.forEach((pregunta) => {
 	pregunta.addEventListener('click', (e) => {
-		e.currentTarget.classList.toggle('activa');
+		e.currentTarget.classList.toggle('Activa');
 
 		const respuesta = pregunta.querySelector('.respuesta');
 		const alturaRealRespuesta = respuesta.scrollHeight;
@@ -14,15 +14,13 @@ preguntas.forEach((pregunta) => {
 		}
 
 		// [Opcional] Reiniciamos las demas preguntas
-		preguntas.forEach((elemento) => {
+		submarca.forEach((elemento) => {
 			// Solamente queremos ejecutar el codigo para las preguntas que no 
 			// sean la pregunta a la que le dimos click.
 			if(pregunta !== elemento){
-				elemento.classList.remove('activa');
+				elemento.classList.remove('Activa');
 				elemento.querySelector('.respuesta').style.maxHeight = null;
 			}
 		});
-
-
 	});
 });

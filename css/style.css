@@ -426,11 +426,6 @@ body.dark .contenedor-pregunta {
 /*! =================================================*/
 /*! ============= Preguntas ============= */
 /*! =================================================*/
-.contenedor-pregunta.activa .respuesta {
-  opacity: 1;
-  margin-top: 20px;
-}
-
 /*! =================================================*/
 /*! ============= Responsive Design ============= */
 /*! =================================================*/
@@ -441,53 +436,6 @@ body.dark .contenedor-pregunta {
     margin-bottom: 0;
   }
 }
-.contenedor-Trabajadores {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: linear-gradient(#ff3939, orange);
-}
-.contenedor-Trabajadores .carta {
-  position: relative;
-  bottom: 50px;
-  width: 350px;
-  height: 190px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-  transition: 0.5s;
-}
-.contenedor-Trabajadores .carta .imgbx {
-  position: absolute;
-  left: 50%;
-  top: -50px;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  transition: 0.5s;
-}
-.contenedor-Trabajadores .carta .imgbx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.contenedor-Trabajadores .carta:hover {
-  height: 450px;
-}
-.contenedor-Trabajadores .carta:hover .imgbx {
-  width: 250px;
-  height: 250px;
-}
-
 .contenedor-simone {
   display: flex;
   flex-direction: column;
@@ -559,6 +507,150 @@ body.dark .contenedor-simone {
   height: 330px;
   width: 190px;
   border: 2px solid orange;
+}
+
+.cervezas {
+  display: none;
+}
+
+.cervezas.activo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.marcas {
+  display: flex;
+}
+.marcas ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+}
+.marcas ul li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+  margin-top: 8px;
+}
+.marcas ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.marcas ul li a .icons {
+  position: relative;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  transition: 0.5s;
+}
+.marcas ul li:nth-child(1).activi ~ .indicador-2 {
+  transform: translateY(0px);
+}
+.marcas ul li:nth-child(2).activi ~ .indicador-2 {
+  transform: translateY(100px);
+}
+.marcas ul li:nth-child(3).activi ~ .indicador-2 {
+  transform: translateY(186.4px);
+}
+.marcas ul li:nth-child(4).activi ~ .indicador-2 {
+  transform: translateY(279.6px);
+}
+.marcas ul li:nth-child(5).activi ~ .indicador-2 {
+  transform: translateY(372.8px);
+}
+.marcas ul li:nth-child(6).activi ~ .indicador-2 {
+  transform: translateY(466px);
+}
+.marcas ul li:nth-child(7).activi ~ .indicador-2 {
+  transform: translateY(559.2px);
+}
+
+.marca {
+  cursor: pointer;
+  color: var(--gris-claro);
+  transition: 0.3s ease all;
+  border-radius: 30px;
+  border: 2px solid orange;
+  width: 80px;
+  height: 80px;
+  box-shadow: var(--sombra);
+}
+
+.contenedorMarcas {
+  display: none;
+}
+
+.contenedorMarcas.Activo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.preguntas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-Trabajadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(#ff3939, orange);
+}
+.contenedor-Trabajadores .carta {
+  position: relative;
+  bottom: 50px;
+  width: 350px;
+  height: 190px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+}
+.contenedor-Trabajadores .carta .imgbx {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: 0.5s;
+}
+.contenedor-Trabajadores .carta .imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contenedor-Trabajadores .carta:hover {
+  height: 450px;
+}
+.contenedor-Trabajadores .carta:hover .imgbx {
+  width: 250px;
+  height: 250px;
 }
 
 footer {

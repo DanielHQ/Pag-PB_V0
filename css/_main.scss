@@ -266,10 +266,6 @@ html {
 /*! ============= Preguntas ============= */
 /*! =================================================*/
 
-.contenedor-pregunta.activa .respuesta {
-	opacity: 1;
-	margin-top: 20px;
-}
 
 /*! =================================================*/
 /*! ============= Responsive Design ============= */
@@ -283,55 +279,7 @@ html {
 	}
 }
 
-// pagina de saber mas sobre habitue //
-
-.contenedor-Trabajadores{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-image: linear-gradient( #ff3939, orange);
-	.carta{
-		position: relative;
-		bottom: 50px;
-		width: 350px;
-		
-		height: 190px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 25px 80px rgba(0,0,0,0.15);
-		transition: 0.5s;
-		.imgbx{
-			position: absolute;
-			left: 50%;
-			top: -50px;
-			transform: translateX(-50%);
-			width: 150px;
-			height: 150px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 15px 50px rgba(0,0,0,0.35);
-			overflow: hidden;
-			transition: 0.5s;
-			img{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-		
-	}
-	.carta:hover{
-		height: 450px;
-		.imgbx{
-			width: 250px;
-			height: 250px;
-		}
-	}
-}
+// ------------ Simone----------
 
 .contenedor-simone{
 	display: flex;
@@ -404,4 +352,173 @@ html {
 	height: 330px;
 	width: 190px;
 	border: 2px solid orange;
+}
+
+//---------------------Cervezas 
+.cervezas{
+	display: none;
+}
+
+.cervezas.activo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+.marcas {
+	display: flex;
+	.indicador-2{
+	}
+	ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0px;
+		li{
+			position: relative;
+			list-style: none;
+			width: 80px;
+			height: 80px;
+			z-index: 1;
+			margin-top: 8px;
+			a{
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				width: 100%;
+				text-align: center;
+				cursor: pointer;
+				.icons{
+					position: relative;
+					display: block;
+					line-height: 60px;
+					text-align: center;
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+	ul{
+		li:nth-child(1).activi ~{
+			.indicador-2{
+				transform: translateY(calc(93.2px * 0));
+			}
+		}
+		li:nth-child(2).activi ~{
+			.indicador-2{
+				transform: translateY(calc(100px * 1));
+			}
+		}
+		li:nth-child(3).activi ~{
+			.indicador-2{
+				transform: translateY(calc(93.2px * 2));
+			}
+		}
+		li:nth-child(4).activi ~{
+			.indicador-2{
+				transform: translateY(calc(93.2px * 3));
+			}
+		}
+		li:nth-child(5).activi ~{
+			.indicador-2{
+				transform: translateY(calc(93.2px * 4));
+			}
+		}
+		li:nth-child(6).activi ~{
+			.indicador-2{
+				transform: translateY(calc(93.2px * 5));
+			}
+		}
+		li:nth-child(7).activi ~{
+			.indicador-2{
+				transform: translateY(calc(93.2px * 6));
+			}
+		}
+	}
+}
+
+
+.marca {
+	cursor: pointer;
+	color: var(--gris-claro);
+	transition: .3s ease all;
+	border-radius: 30px;
+	border: 2px solid orange;
+	width: 80px;
+	height: 80px;
+	box-shadow: var(--sombra);
+
+}
+
+.contenedorMarcas{
+	display: none;
+}
+
+.contenedorMarcas.Activo{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 20px;
+	width: 300px;
+	justify-content: center;
+	align-items: center;
+}
+
+.preguntas{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+// pagina de saber mas sobre habitue //
+
+.contenedor-Trabajadores{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-image: linear-gradient( #ff3939, orange);
+	.carta{
+		position: relative;
+		bottom: 50px;
+		width: 350px;
+		height: 190px;
+		background: #fff;
+		border-radius: 20px;
+		box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+		transition: 0.5s;
+		.imgbx{
+			position: absolute;
+			left: 50%;
+			top: -50px;
+			transform: translateX(-50%);
+			width: 150px;
+			height: 150px;
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+			overflow: hidden;
+			transition: 0.5s;
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		
+	}
+	.carta:hover{
+		height: 450px;
+		.imgbx{
+			width: 250px;
+			height: 250px;
+		}
+	}
 }
