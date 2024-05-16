@@ -446,7 +446,7 @@ body.dark .menu-p .indicador::after {
   box-shadow: var(--sombra);
   overflow: hidden;
 }
-.contenedor-preguntas.activo i {
+.contenedor-preguntas.activo .fi-br-chevron-double-down {
   position: relative;
   margin: 5px 0;
   font-size: 3rem;
