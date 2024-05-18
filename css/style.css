@@ -27,6 +27,7 @@
   align-items: center;
 }
 .btnPhone nav .btn-menu {
+  background-image: url(/img/icon/list_white.svg);
   transition: 0.3s ease all;
   background-repeat: no-repeat;
   background-position: center;
@@ -250,7 +251,7 @@ html body.dark {
   align-items: center;
   justify-content: center;
   top: 90px;
-  right: 30px;
+  right: 5px;
   z-index: 10000;
 }
 #cerrar + label svg {
@@ -683,49 +684,110 @@ body.dark .contenedor-simone {
 
 .contenedor-Trabajadores {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(#ff3939, transparent);
+  justify-content: center;
+  padding-top: 20px;
+  text-align: center;
+}
+.contenedor-Trabajadores h1 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 1px 3px 4px black;
+  margin-bottom: 20px;
+}
+.contenedor-Trabajadores .perfiles {
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.contenedor-Trabajadores .perfiles .perfil {
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-image: linear-gradient(#ff3939, orange);
-}
-.contenedor-Trabajadores .carta {
-  position: relative;
-  bottom: 50px;
-  width: 350px;
-  height: 190px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-  transition: 0.5s;
-}
-.contenedor-Trabajadores .carta .imgbx {
-  position: absolute;
-  left: 50%;
-  top: -50px;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
   overflow: hidden;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
   transition: 0.5s;
 }
-.contenedor-Trabajadores .carta .imgbx img {
+.contenedor-Trabajadores .perfiles .perfil img {
+  width: 70px;
+  height: 85px;
+  transition: 0.5s;
+}
+.contenedor-Trabajadores .perfiles .perfil .text {
+  display: none;
+}
+.contenedor-Trabajadores .perfiles .perfil:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  padding: 5px;
+  width: 130px;
+  height: 180px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  background: linear-gradient(25deg, red, orange, yellow 120%);
+}
+.contenedor-Trabajadores .perfiles .perfil:hover img {
+  border-radius: 50%;
+  box-shadow: var(--sombra);
+  width: 90px;
+  height: 90px;
+}
+.contenedor-Trabajadores .perfiles .perfil:hover .text {
+  display: flex;
+  flex-direction: column;
+}
+.contenedor-Trabajadores .perfiles .perfil:hover .text ju h2 {
+  font-size: 1.5rem;
+}
+.contenedor-Trabajadores .perfiles .perfil:hover .text p {
+  font-size: 1rem;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.galeria .fotos {
+  width: 100%;
+}
+.galeria .fotos .imgs {
+  padding: 2px;
+  background: white;
+}
+.galeria .fotos .imgs img {
+  width: 100%;
+  height: 123px;
+}
+.galeria .fotos .imgs:hover {
+  width: 100%;
+  height: 400px;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 380px;
+  background: rgba(58, 58, 58, 0.66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.galeria .fotos .imgs:hover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.contenedor-Trabajadores .carta:hover {
-  height: 450px;
-}
-.contenedor-Trabajadores .carta:hover .imgbx {
-  width: 250px;
-  height: 250px;
 }
 
 footer {

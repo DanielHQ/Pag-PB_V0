@@ -28,7 +28,7 @@
         justify-content: space-between;
         align-items: center;
         .btn-menu {
-            // background-image: url(/img/icon/list_white.svg);
+            background-image: url(/img/icon/list_white.svg);
             @include Botones_header();
             body.dark & {
                 background-image: url(/img/icon/list_white.svg);

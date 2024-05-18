@@ -56,7 +56,7 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 45px;
+		border-radius: 20px;
 		overflow: hidden;
 		z-index: 1;
 	}
@@ -81,7 +81,7 @@ display: none;
 	align-items: center;
 	justify-content: center;
 	top: 90px;
-	right: 30px;
+	right: 5px;
 	z-index: 10000;
 	svg{
 		color: rgba(0, 0, 0, 0.788);
@@ -294,7 +294,7 @@ display: none;
 			box-shadow: var(--sombra);
 			overflow: hidden;
 		}
-		i{
+		.fi-br-chevron-double-down{
 			position: relative;
 			margin: 5px 0;
 			font-size: 3rem;
@@ -560,47 +560,110 @@ display: none;
 
 .contenedor-Trabajadores{
 	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: linear-gradient( #ff3939, transparent);
 	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-image: linear-gradient( #ff3939, orange);
-	.carta{
-		position: relative;
-		bottom: 50px;
-		width: 350px;
-		height: 190px;
-		background: #fff;
-		border-radius: 20px;
-		box-shadow: 0 25px 80px rgba(0,0,0,0.15);
-		transition: 0.5s;
-		.imgbx{
-			position: absolute;
-			left: 50%;
-			top: -50px;
-			transform: translateX(-50%);
-			width: 150px;
-			height: 150px;
-			background: #fff;
-			border-radius: 20px;
-			box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+	padding-top: 20px;
+	text-align: center;
+	h1{
+		
+		font-family: "Gochi Hand", cursive;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 5rem;
+		color: white;
+		text-shadow: 1px 3px 4px black;
+		margin-bottom: 20px;
+	}
+	.perfiles{
+		height: 250px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 100%;
+		.perfil{
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			overflow: hidden;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: white;
 			transition: 0.5s;
 			img{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				width: 70px;
+				height: 85px;
+				transition: 0.5s;
+			}
+			.text{
+				display: none;
 			}
 		}
-		
+		.perfil:hover{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-content: center;
+			padding: 5px;
+			width: 130px;
+			height: 180px;
+			border-radius: 10px;
+			background-color:	white;
+			text-align: center;
+			background: linear-gradient(25deg, red, orange, yellow 120%);
+			img{
+				border-radius: 50%;
+				box-shadow: var(--sombra);
+				width: 90px;
+				height: 90px;
+			}
+			.text{
+				display: flex;
+				flex-direction: column;
+				ju
+				h2{
+					font-size: 1.5rem;
+					
+				}
+				p{
+						font-size: 1rem;
+				}
+			}
 	}
-	.carta:hover{
-		height: 450px;
-		.imgbx{
-			width: 250px;
-			height: 250px;
+}
+}
+.galeria{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	.fotos{
+		width: 100%;
+		.imgs{
+			padding: 2px;
+			background: white;
+			img{
+				width: 100%;
+				height: 123px;
+			}
+		}
+		.imgs:hover{
+			width: 100%;
+			height: 400px;
+			position: absolute;
+			left: 0;
+			top: 380px;
+			background: rgb(58 58 58 / 66%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s;
+			img{
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 }
