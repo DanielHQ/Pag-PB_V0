@@ -450,8 +450,6 @@ display: none;
 
 .marcas {
 	display: flex;
-	.indicador-2{
-	}
 	ul{
 		display: flex;
 		flex-direction: column;
@@ -563,7 +561,7 @@ display: none;
 	flex-direction: column;
 	width: 100%;
 	background: linear-gradient( #ff3939, transparent);
-	justify-content: center;
+	justify-content: flex-start;
 	padding-top: 20px;
 	text-align: center;
 	h1{
@@ -577,11 +575,11 @@ display: none;
 		margin-bottom: 20px;
 	}
 	.perfiles{
-		height: 250px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
 		width: 100%;
+		margin-bottom: 40px;
 		.perfil{
 			display: flex;
 			justify-content: center;
@@ -601,14 +599,16 @@ display: none;
 				display: none;
 			}
 		}
+		
 		.perfil:hover{
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
 			align-content: center;
+			position: relative;
 			padding: 5px;
 			width: 130px;
-			height: 180px;
+			height: 220px;
 			border-radius: 10px;
 			background-color:	white;
 			text-align: center;
@@ -633,37 +633,37 @@ display: none;
 			}
 	}
 }
-}
-.galeria{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-	.fotos{
-		width: 100%;
-		.imgs{
-			padding: 2px;
-			background: white;
-			img{
-				width: 100%;
-				height: 123px;
-			}
-		}
-		.imgs:hover{
-			width: 100%;
-			height: 400px;
-			position: absolute;
-			left: 0;
-			top: 380px;
-			background: rgb(58 58 58 / 66%);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			transition: 0.5s;
-			img{
-				width: 100%;
-				height: 100%;
-			}
+.carousel-inner{
+	border-radius: 20px;
+	.carousel-item{
+		img{
+			height: 290px;
 		}
 	}
+}
+.mapeado{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h2{
+		margin: 15px 0;
+		font-size: 2rem;
+		text-shadow: 1px 3px 4px rgba(255, 0, 0, 0.442);
+		font-weight: 800;
+	}
+	.mapa{
+		border-radius: 10px;
+		border: 2px solid #428beb;
+		width: 340px;
+		height: 220px;
+		overflow: hidden;
+		iframe{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
 }

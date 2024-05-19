@@ -687,7 +687,7 @@ body.dark .contenedor-simone {
   flex-direction: column;
   width: 100%;
   background: linear-gradient(#ff3939, transparent);
-  justify-content: center;
+  justify-content: flex-start;
   padding-top: 20px;
   text-align: center;
 }
@@ -701,11 +701,11 @@ body.dark .contenedor-simone {
   margin-bottom: 20px;
 }
 .contenedor-Trabajadores .perfiles {
-  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  margin-bottom: 40px;
 }
 .contenedor-Trabajadores .perfiles .perfil {
   display: flex;
@@ -731,9 +731,10 @@ body.dark .contenedor-simone {
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
+  position: relative;
   padding: 5px;
   width: 130px;
-  height: 180px;
+  height: 220px;
   border-radius: 10px;
   background-color: white;
   text-align: center;
@@ -755,37 +756,34 @@ body.dark .contenedor-simone {
 .contenedor-Trabajadores .perfiles .perfil:hover .text p {
   font-size: 1rem;
 }
-
-.galeria {
+.contenedor-Trabajadores .carousel-inner {
+  border-radius: 20px;
+}
+.contenedor-Trabajadores .carousel-inner .carousel-item img {
+  height: 290px;
+}
+.contenedor-Trabajadores .mapeado {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-.galeria .fotos {
-  width: 100%;
-}
-.galeria .fotos .imgs {
-  padding: 2px;
-  background: white;
-}
-.galeria .fotos .imgs img {
-  width: 100%;
-  height: 123px;
-}
-.galeria .fotos .imgs:hover {
-  width: 100%;
-  height: 400px;
-  position: absolute;
-  left: 0;
-  top: 380px;
-  background: rgba(58, 58, 58, 0.66);
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
 }
-.galeria .fotos .imgs:hover img {
+.contenedor-Trabajadores .mapeado h2 {
+  margin: 15px 0;
+  font-size: 2rem;
+  text-shadow: 1px 3px 4px rgba(255, 0, 0, 0.442);
+  font-weight: 800;
+}
+.contenedor-Trabajadores .mapeado .mapa {
+  border-radius: 10px;
+  border: 2px solid #428beb;
+  width: 340px;
+  height: 220px;
+  overflow: hidden;
+}
+.contenedor-Trabajadores .mapeado .mapa iframe {
   width: 100%;
   height: 100%;
 }
